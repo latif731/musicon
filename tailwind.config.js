@@ -20,7 +20,8 @@ export default {
         'logreg':"rgba(0, 0, 0, 0.8)",
         'logreg2':"rgba(37, 40, 54, 0.7)",
         'logreg3':"rgba(21, 17, 33, 1)",
-        'input':"rgba(60, 65, 86, 1)"
+        'input':"rgba(60, 65, 86, 1)",
+         'garis':"rgba(60, 65, 86, 1)"
       },
       textColor:{
         'email':"rgba(146, 146, 157, 1)",
@@ -33,18 +34,25 @@ export default {
       },
       colors:{
         'right':"rgba(67, 153, 253, 1)",
-        'left':"rgba(0, 101, 218, 1)"
+        'left':"rgba(0, 101, 218, 1)",
+        'abuabu':"rgba(146, 146, 157, 1)",
+        'garis':"rgba(60, 65, 86, 1)",
       },
       width:{
         x:"1550px",
         login:"435px",
         input:"396px",
+        loginButton:"396px"
       },
       height:{
         y:"1024px",
         login:"550px",
         input:"40px",
+        loginButton:"41px"
       },
+      border:{
+        'garis':"rgba(60, 65, 86, 1)"
+      }
     },
   },
   plugins: [],
