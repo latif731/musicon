@@ -66,22 +66,22 @@
                 </div>
                 <div>
                     <button
-                    class="w-[396px] border rounded-full h-[41px] mt-4 border-garis flex items-center"
+                    class="w-[396px] border rounded-full h-[41px] mt-4 border-garis flex items-center pl-3 gap-24"
                     >
                     <div>
                         <img :src="google" alt="">
                     </div>
-                    <div>
+                    <div class="pl-3">
                         Login with Google
                     </div>
                 </button>
                 <button
-                class="w-[396px] border rounded-full h-[41px] mt-4 border-garis flex items-center gap-"
+                class="w-[396px] border rounded-full h-[41px] mt-4 border-garis pl-3 flex items-center gap-24"
                 >
                 <div>
                     <img :src="facebook" alt="">
                 </div>
-                <div>
+                <div class="pl-2">
                     Login with Facebook
                 </div>
                     </button>
