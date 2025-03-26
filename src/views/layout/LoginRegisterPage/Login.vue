@@ -2,11 +2,13 @@
     import logo1 from "@/assets/Logo1.png"
     import google from "@/assets/google.png"
     import facebook from "@/assets/facebook.png"
-    import { ref } from 'vue'
+    import { ref, defineEmits } from 'vue'
 
     const password = ref('')
     const showPassword = ref(false)
 
+    // Emit Event ke parent
+    const emit = defineEmits(['switch-to-register'])
 </script>
 
 
@@ -53,7 +55,7 @@
                     </button>
                 </form>
                 <div class="font-kontol text-[14px] text-center mt-1 text-gray-400" >
-                    Don’t have an account? <span class="text-white">Sign Up Here</span>
+                    Don’t have an account?<span class="text-white cursor-pointer" @click="emit('switch-to-register')">Sign Up Here</span>
                 </div>
                 <div class="items-center flex justify-between mt-2">
                     <div
@@ -66,22 +68,48 @@
                 </div>
                 <div>
                     <button
-                    class="w-[396px] border rounded-full h-[41px] mt-4 border-garis flex items-center pl-3 gap-24"
+                    class="
+                    w-[396px] 
+                    border 
+                    hover:bg-hover 
+                    rounded-full 
+                    h-[41px] 
+                    mt-4 
+                    border-garis 
+                    flex 
+                    items-center 
+                    pl-3 
+                    gap-24 
+                    hover:text-black
+                    "
                     >
                     <div>
                         <img :src="google" alt="">
                     </div>
-                    <div class="pl-3">
+                    <div class="pl-3 hover:text-black">
                         Login with Google
                     </div>
                 </button>
                 <button
-                class="w-[396px] border rounded-full h-[41px] mt-4 border-garis pl-3 flex items-center gap-24"
+                class="
+                w-[396px] 
+                border 
+                rounded-full 
+                h-[41px] 
+                mt-4 
+                border-garis 
+                pl-3 
+                flex 
+                items-center 
+                gap-24
+                hover:bg-hover
+                hover:text-black
+                "
                 >
                 <div>
                     <img :src="facebook" alt="">
                 </div>
-                <div class="pl-2">
+                <div class="pl-2 hover:text-black">
                     Login with Facebook
                 </div>
                     </button>

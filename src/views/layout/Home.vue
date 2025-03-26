@@ -4,14 +4,42 @@ import Card from "@/components/Card.vue";
 import PlaylistCard from "@/components/PlaylistCard.vue";
 import Banner from "@/components/Banner.vue";
 import Login from "@/views/layout/LoginRegisterPage/Login.vue"
+import { ref, watch } from "vue";
+import Register from "./LoginRegisterPage/Register.vue";
+
+
+const showLogin = ref(false)
+const showRegister = ref(false)
+
+const switchToRegister = () => {
+  showLogin.value = false
+  showRegister.value = true
+}
+
+const switchToLogin = () => {
+  showLogin.value = true
+  showRegister.value = false
+}
+
+watch([showLogin, showRegister], ([login, register]) => {
+  if (login || register) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+});
+
 </script>
 
 <template>
   <div>
     <Layout>
-      <div v-if="true">
-        <div class= "text-white fixed flex justify-center items-center top-0 left-0 bg-logreg w-x h-y z-50">
-        <Login/>
+      <div v-if="showLogin || showRegister">
+        <div class= "text-white fixed flex justify-center items-center top-0 left-0 bg-logreg w-x h-y z-50 overflow-auto">
+        <!-- LOGIN PAGE -->
+        <Login v-if="showLogin" :showLogin="showLogin" @switch-to-register="switchToRegister"/>
+        <!-- REGISTER PAGE -->
+        <Register v-if="showRegister" :showRegister="showRegister" @switch-to-login="switchToLogin"/>
         </div>
       </div>
       <div>

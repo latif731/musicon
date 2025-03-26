@@ -21,7 +21,10 @@ export default {
         'logreg2':"rgba(37, 40, 54, 0.7)",
         'logreg3':"rgba(21, 17, 33, 1)",
         'input':"rgba(60, 65, 86, 1)",
-         'garis':"rgba(60, 65, 86, 1)"
+         'garis':"rgba(60, 65, 86, 1)",
+         'scroll':"rgba(255, 255, 255, 0.4)",
+         'hover':"rgba(226, 226, 234, 1)",
+         'btn':"rgba(60, 65, 86, 1)"
       },
       textColor:{
         'email':"rgba(146, 146, 157, 1)",
