@@ -8,13 +8,24 @@ import VolumeHigh from 'vue-material-design-icons/VolumeHigh.vue';
 import VolumeMute from 'vue-material-design-icons/VolumeMute.vue';
 import liked from "@/assets/PlayerIcons/liked.png"
 import share from "@/assets/PlayerIcons/share.png"
+import music from "@/assets/music1.png"
+import stop from "@/assets/stop.png" 
 </script>
 
 <template>
   <div
     class="fixed bottom-0 left-0 right-0 bg-player text-white h-[110px] p-8 flex items-center"
   >
-    <div class="flex flex-col mr-36">
+    <div v-if="false" class="mr-35 pl-12">
+      <div class="flex gap-5 mr-24">
+        <img :src="music" alt="" class="w-[84px] h-[84px]">
+        <div class="flex flex-col pt-4">
+          <h5 class="font-kontol font-[700] text-[24px]">Hollow</h5>
+          <p class="font-kontol font-[400] text-[12px] text-[#92929D]">Final Fantasy VII Remake</p>
+        </div>
+      </div>
+    </div>
+    <div v-else class="flex flex-col mr-36">
       <h2 class="font-kontol font-[700] text-[20px] text-white">
         No Song Played
       </h2>
@@ -31,7 +42,10 @@ import share from "@/assets/PlayerIcons/share.png"
               <div>
                 <img :src="Previous" alt="" />
               </div>
-              <div>
+              <div v-if="false">
+                <img :src="stop" alt="" />
+              </div>
+              <div v-else>
                 <img :src="Play" alt="" />
               </div>
               <div>
