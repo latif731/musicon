@@ -47,7 +47,7 @@ watch([showLogin, showRegister], ([login, register]) => {
         <Register v-if="showRegister" :showRegister="showRegister" @switch-to-login="switchToLogin"/>
         </div>
       </div>
-      <div v-if="true">
+      <div v-if="false">
         <div class= "text-white fixed flex justify-center items-center top-0 left-0 bg-logreg w-x h-y z-50 overflow-auto">
         <!-- LOGIN PAGE -->
         <Accordion/>
