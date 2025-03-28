@@ -6,10 +6,14 @@ import Banner from "@/components/Banner.vue";
 import Login from "@/views/layout/LoginRegisterPage/Login.vue"
 import { ref, watch } from "vue";
 import Register from "./LoginRegisterPage/Register.vue";
-
+import Accordion from "@/components/Accordion.vue";
 
 const showLogin = ref(false)
 const showRegister = ref(false)
+
+const createPlaylist = ref(true)
+const createSuccess = ref(false)
+
 
 const switchToRegister = () => {
   showLogin.value = false
@@ -25,9 +29,10 @@ watch([showLogin, showRegister], ([login, register]) => {
   if (login || register) {
     document.body.style.overflow = "hidden";
   } else {
-    document.body.style.overflow = "auto";
+    document.body.style.overflow = "hidden";
   }
 });
+
 
 </script>
 
@@ -40,6 +45,13 @@ watch([showLogin, showRegister], ([login, register]) => {
         <Login v-if="showLogin" :showLogin="showLogin" @switch-to-register="switchToRegister"/>
         <!-- REGISTER PAGE -->
         <Register v-if="showRegister" :showRegister="showRegister" @switch-to-login="switchToLogin"/>
+        </div>
+      </div>
+      <div v-if="true">
+        <div class= "text-white fixed flex justify-center items-center top-0 left-0 bg-logreg w-x h-y z-50 overflow-auto">
+        <!-- LOGIN PAGE -->
+        <Accordion/>
+        <!-- REGISTER PAGE -->
         </div>
       </div>
       <div>
