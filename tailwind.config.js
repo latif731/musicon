@@ -55,6 +55,9 @@ export default {
       },
       border:{
         'garis':"rgba(60, 65, 86, 1)"
+      },
+      padding:{
+        'p1':"3.5"
       }
     },
   },

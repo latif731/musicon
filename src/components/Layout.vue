@@ -10,7 +10,7 @@ import Player from './Player.vue';
 <template>
     <div>
         <NavbarHome/>
-        <div class="flex">
+        <div class="flex overflow-auto pb-28">
             <div class="fixed">
                 <div class="border border-sidebar w-[291px]  bg-sidebar text-white pt-6 pl-5 pr-7">
                     <SidebarTop/>
