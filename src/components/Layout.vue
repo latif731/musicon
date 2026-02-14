@@ -19,7 +19,7 @@ import Player from './Player.vue';
                     <SidebarBottom/>
                 </div>
             </div>
-            <div class="ml-[291px] p-7 bg-[#363947] w-[100%]">
+            <div class="ml-[291px] p-7 bg-[#363947] w-full min-h-screen pb-[140px]">
                 <slot></slot>
             </div>
             <Player/>

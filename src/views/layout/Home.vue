@@ -47,13 +47,13 @@ watch([showLogin, showRegister], ([login, register]) => {
         <Register v-if="showRegister" :showRegister="showRegister" @switch-to-login="switchToLogin"/>
         </div>
       </div>
-      <div v-if="false">
-        <div class= "text-white fixed flex justify-center items-center top-0 left-0 bg-logreg w-x h-y z-50 overflow-auto">
+      <!-- <div v-if="true"> -->
+        <!-- <div class= "text-white fixed flex justify-center items-center top-0 left-0 bg-logreg w-x h-y z-50 overflow-auto"> -->
         <!-- LOGIN PAGE -->
-        <Accordion/>
+        <!-- <Accordion/> -->
         <!-- REGISTER PAGE -->
-        </div>
-      </div>
+        <!-- </div> -->
+      <!-- </div> -->
       <div>
         <div v-if="false">
           <h1 class="text-[32px] font-kontol font-[700] text-white">Your Playlist</h1>  

@@ -3,11 +3,22 @@ import Layout from "@/components/Layout.vue";
 import toggle from "@/assets/toggle.png";
 import music_1 from "@/assets/music1.png";
 import search from "@/assets/icons/search.png";
+import playlist_1 from "@/assets/playlist1.png";
+import playlist_2 from "@/assets/playlist2.png";
+import playlist_3 from "@/assets/playlist3.png";
+import Accordion from "@/components/Accordion.vue";
 </script>
 
 <template>
   <Layout>
-    <div class="flex flex-col h-screen">
+       <div v-if="false">
+        <div class= "text-white fixed flex justify-center items-center top-0 left-0 bg-logreg w-x h-y z-50 overflow-auto">
+        <!-- LOGIN PAGE -->
+        <Accordion/>
+        <!-- REGISTER PAGE -->
+        </div>
+      </div>
+    <div class="flex flex-col">
       <h1 class="font-kontol font-700 text-[32px] text-white">
         Created Playlist / Anime Songs
       </h1>
@@ -35,7 +46,7 @@ import search from "@/assets/icons/search.png";
       <div class="flex justify-end" v-if="false">
         <button class="p-2 bg-[#FFFFFF] rounded-lg w-[190px]">Close</button>
       </div>
-      <div class="max-h-[320px] bg-[#1F1D2B] pb-5 pl-2 pt-2 pr-2 mt-5">
+      <div class="bg-[#1F1D2B] pb-5 pl-2 pt-2 pr-2 mt-5">
         <h2 class="text-white font-[500] text-[18px] font-kontol p-3">
           Let’s find song for your playlist
         </h2>
@@ -51,10 +62,61 @@ import search from "@/assets/icons/search.png";
             placeholder="search"
           />
         </div>
-        <div class="flex flex-col "> 
-          <div class="flex"></div>
-          <div class="flex"></div>
-          <div class="flex"></div>
+        <div class="flex flex-col p-6 gap-5">
+          <div class="flex justify-between">
+            <div class="flex gap-5">
+              <img :src="playlist_2" alt="" class="w-[49px] h-[50px]" />
+              <div class="flex flex-col">
+                <h3 class="text-[20px] font-kontol font-[700] text-white">
+                  Moon River
+                </h3>
+                <p class="text-[12px] font-kontol font-[700] text-[#92929D]">
+                  Jacob Collier
+                </p>
+              </div>
+            </div>
+            <button
+              class="bg-[#92929D] rounded-[20px] w-[142px] h-[43px] hover:bg-[#4399FD] transition duration-300 text-white font-kontol font-[700]"
+            >
+              Add
+            </button>
+          </div>
+          <div class="flex justify-between">
+            <div class="flex gap-5">
+              <img :src="playlist_2" alt="" class="w-[49px] h-[50px]" />
+              <div class="flex flex-col">
+                <h3 class="text-[20px] font-kontol font-[700] text-white">
+                  Moon River
+                </h3>
+                <p class="text-[12px] font-kontol font-[700] text-[#92929D]">
+                  Jacob Collier
+                </p>
+              </div>
+            </div>
+            <button
+              class="bg-[#92929D] rounded-[20px] w-[142px] h-[43px] hover:bg-[#4399FD] transition duration-300 text-white font-kontol font-[700]"
+            >
+              Add
+            </button>
+          </div>
+          <div class="flex justify-between">
+            <div class="flex gap-5">
+              <img :src="playlist_2" alt="" class="w-[49px] h-[50px]" />
+              <div class="flex flex-col">
+                <h3 class="text-[20px] font-kontol font-[700] text-white">
+                  Moon River
+                </h3>
+                <p class="text-[12px] font-kontol font-[700] text-[#92929D]">
+                  Jacob Collier
+                </p>
+              </div>
+            </div>
+            <button
+              class="bg-[#92929D] rounded-[20px] w-[142px] h-[43px] hover:bg-[#4399FD] transition duration-300 text-white font-kontol font-[700]"
+            >
+              Add
+            </button>
+          </div>
         </div>
       </div>
       <div class="flex-grow">
@@ -84,7 +146,7 @@ import search from "@/assets/icons/search.png";
                   </th>
                 </tr>
               </thead>
-              <tbody v-if="false">
+              <tbody v-if="true">
                 <tr
                   class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
                 >
@@ -104,8 +166,18 @@ import search from "@/assets/icons/search.png";
                     <a
                       href="#"
                       class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >Edit</a
-                    >
+                      >Edit
+                      </a>
+                    <a
+                      href="#"
+                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                      >Edit
+                      </a>
+                    <a
+                      href="#"
+                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                      >Edit
+                      </a>
                   </td>
                 </tr>
                 <tr
@@ -362,7 +434,7 @@ import search from "@/assets/icons/search.png";
                   </td>
                 </tr>
               </tbody>
-              <tbody v-if="true">
+              <tbody v-if="false">
                 <tr
                   class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
                 >
