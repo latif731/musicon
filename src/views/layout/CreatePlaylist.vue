@@ -11,13 +11,15 @@ import Accordion from "@/components/Accordion.vue";
 
 <template>
   <Layout>
-       <div v-if="false">
-        <div class= "text-white fixed flex justify-center items-center top-0 left-0 bg-logreg w-x h-y z-50 overflow-auto">
+    <div v-if="false">
+      <div
+        class="text-white fixed flex justify-center items-center top-0 left-0 bg-logreg w-x h-y z-50 overflow-auto"
+      >
         <!-- LOGIN PAGE -->
-        <Accordion/>
+        <Accordion />
         <!-- REGISTER PAGE -->
-        </div>
       </div>
+    </div>
     <div class="flex flex-col">
       <h1 class="font-kontol font-700 text-[32px] text-white">
         Created Playlist / Anime Songs
@@ -167,17 +169,17 @@ import Accordion from "@/components/Accordion.vue";
                       href="#"
                       class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                       >Edit
-                      </a>
+                    </a>
                     <a
                       href="#"
                       class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                       >Edit
-                      </a>
+                    </a>
                     <a
                       href="#"
                       class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                       >Edit
-                      </a>
+                    </a>
                   </td>
                 </tr>
                 <tr
@@ -434,6 +436,7 @@ import Accordion from "@/components/Accordion.vue";
                   </td>
                 </tr>
               </tbody>
+
               <tbody v-if="false">
                 <tr
                   class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
@@ -446,6 +449,11 @@ import Accordion from "@/components/Accordion.vue";
               </tbody>
             </table>
           </div>
+        </div>
+        <div class="text-center mt-8">
+          <button class="p-2 bg-[#FFFFFF] rounded-lg w-[500px]">
+            + Create 
+          </button>
         </div>
       </div>
     </div>
