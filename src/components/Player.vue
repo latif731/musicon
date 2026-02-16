@@ -14,7 +14,7 @@ import stop from "@/assets/stop.png"
 
 <template>
   <div
-    class="fixed bottom-0 left-0 right-0 bg-player text-white h-[110px] p-8 flex items-center"
+    class="fixed bottom-0 left-0 right-0 bg-player text-white h-[110px] p-8 flex items-center z-50"
   >
     <div v-if="false" class="mr-35 pl-12">
       <div class="flex gap-5 mr-24">

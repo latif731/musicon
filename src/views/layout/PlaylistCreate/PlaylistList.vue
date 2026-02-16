@@ -10,10 +10,9 @@ import Accordion from "@/components/Accordion.vue";
 </script>
 
 <template>
-  <Layout>
     <div v-if="false">
       <div
-        class="text-white fixed flex justify-center items-center top-0 left-0 bg-logreg w-x h-y z-50 overflow-auto"
+        class="text-white fixed flex justify-center items-center top-0 left-0 bg-logreg w-x h-y z-10 overflow-auto"
       >
         <!-- LOGIN PAGE -->
         <Accordion />
@@ -22,9 +21,9 @@ import Accordion from "@/components/Accordion.vue";
     </div>
     <div class="flex flex-col">
       <h1 class="font-kontol font-700 text-[32px] text-white">
-        Created Playlist / Anime Songs
+        Created Playlist 
       </h1>
-      <div class="flex mt-6 gap-20">
+      <!-- <div class="flex mt-6 gap-20">
         <div class="flex gap-4 items-center">
           <img class="w-[120px] h-[120px]" :src="music_1" alt="" />
           <div class="w-[595px]">
@@ -39,13 +38,13 @@ import Accordion from "@/components/Accordion.vue";
         <div>
           <img :src="toggle" alt="" />
         </div>
-      </div>
+      </div> -->
       <div class="flex justify-end" v-if="true">
         <button class="p-2 bg-[#FFFFFF] rounded-lg w-[190px]">
-          + Add Song
+          + Create Playlist
         </button>
       </div>
-      <div class="flex justify-end" v-if="false">
+      <!-- <div class="flex justify-end" v-if="false">
         <button class="p-2 bg-[#FFFFFF] rounded-lg w-[190px]">Close</button>
       </div>
       <div class="bg-[#1F1D2B] pb-5 pl-2 pt-2 pr-2 mt-5">
@@ -120,7 +119,7 @@ import Accordion from "@/components/Accordion.vue";
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="flex-grow">
         <div class="relative shadow-md sm:rounded-lg mt-4">
           <div class="max-h-[320px] overflow-y-auto">
@@ -451,11 +450,10 @@ import Accordion from "@/components/Accordion.vue";
           </div>
         </div>
         <div class="text-center mt-8">
-          <button class="p-2 bg-[#FFFFFF] rounded-lg w-[500px]">
+          <!-- <button class="p-2 bg-[#FFFFFF] rounded-lg w-[500px]">
             + Create 
-          </button>
+          </button> -->
         </div>
       </div>
     </div>
-  </Layout>
 </template>
