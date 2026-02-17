@@ -137,10 +137,10 @@ import Accordion from "@/components/Accordion.vue";
                     Title
                   </th>
                   <th scope="col" class="px-6 py-3 text-white normal-case">
-                    Artist
+                    Total Song
                   </th>
                   <th scope="col" class="px-6 py-3 text-white normal-case">
-                    Duration
+                    Date Created
                   </th>
                   <th scope="col" class="px-6 py-3 text-white normal-case">
                     <span class="text">Action</span>
@@ -161,8 +161,8 @@ import Accordion from "@/components/Accordion.vue";
                     <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
                     Moon River
                   </td>
-                  <td class="px-6 py-4 text-white">Jacob Collier</td>
-                  <td class="px-6 py-4 text-white">02.35</td>
+                  <td class="px-6 py-4 text-white font-kontol">235</td>
+                  <td class="px-6 py-4 text-white font-kontol">July 11, 2021</td>
                   <td class="px-6 py-4">
                     <a
                       href="#"
@@ -195,7 +195,7 @@ import Accordion from "@/components/Accordion.vue";
                     Hollow
                   </td>
                   <td class="px-6 py-4 text-white">Final Fantasi</td>
-                  <td class="px-6 py-4 text-white">04.51</td>
+                  <td class="px-6 py-4 text-white">20</td>
                   <td class="px-6 py-4">
                     <a
                       href="#"
@@ -218,7 +218,7 @@ import Accordion from "@/components/Accordion.vue";
                     Jazz & Chill
                   </td>
                   <td class="px-6 py-4 text-white">Joe Pass</td>
-                  <td class="px-6 py-4 text-white">03.59</td>
+                  <td class="px-6 py-4 text-white">50</td>
                   <td class="px-6 py-4">
                     <a
                       href="#"
@@ -241,7 +241,7 @@ import Accordion from "@/components/Accordion.vue";
                     Moon River
                   </td>
                   <td class="px-6 py-4 text-white">Jacob Collier</td>
-                  <td class="px-6 py-4 text-white">02.35</td>
+                  <td class="px-6 py-4 text-white">25</td>
                   <td class="px-6 py-4">
                     <a
                       href="#"
@@ -264,7 +264,7 @@ import Accordion from "@/components/Accordion.vue";
                     Hollow
                   </td>
                   <td class="px-6 py-4 text-white">Final Fantasi</td>
-                  <td class="px-6 py-4 text-white">04.51</td>
+                  <td class="px-6 py-4 text-white">60</td>
                   <td class="px-6 py-4">
                     <a
                       href="#"
@@ -287,7 +287,7 @@ import Accordion from "@/components/Accordion.vue";
                     Jazz & Chill
                   </td>
                   <td class="px-6 py-4 text-white">Joe Pass</td>
-                  <td class="px-6 py-4 text-white">03.59</td>
+                  <td class="px-6 py-4 text-white">15</td>
                   <td class="px-6 py-4">
                     <a
                       href="#"
@@ -310,7 +310,7 @@ import Accordion from "@/components/Accordion.vue";
                     Moon River
                   </td>
                   <td class="px-6 py-4 text-white">Jacob Collier</td>
-                  <td class="px-6 py-4 text-white">02.35</td>
+                  <td class="px-6 py-4 text-white">120</td>
                   <td class="px-6 py-4">
                     <a
                       href="#"
@@ -333,7 +333,7 @@ import Accordion from "@/components/Accordion.vue";
                     Hollow
                   </td>
                   <td class="px-6 py-4 text-white">Final Fantasi</td>
-                  <td class="px-6 py-4 text-white">04.51</td>
+                  <td class="px-6 py-4 text-white">200</td>
                   <td class="px-6 py-4">
                     <a
                       href="#"
@@ -356,7 +356,7 @@ import Accordion from "@/components/Accordion.vue";
                     Jazz & Chill
                   </td>
                   <td class="px-6 py-4 text-white">Joe Pass</td>
-                  <td class="px-6 py-4 text-white">03.59</td>
+                  <td class="px-6 py-4 text-white">245</td>
                   <td class="px-6 py-4">
                     <a
                       href="#"
@@ -379,7 +379,7 @@ import Accordion from "@/components/Accordion.vue";
                     Moon River
                   </td>
                   <td class="px-6 py-4 text-white">Jacob Collier</td>
-                  <td class="px-6 py-4 text-white">02.35</td>
+                  <td class="px-6 py-4 text-white">35</td>
                   <td class="px-6 py-4">
                     <a
                       href="#"
@@ -402,7 +402,7 @@ import Accordion from "@/components/Accordion.vue";
                     Hollow
                   </td>
                   <td class="px-6 py-4 text-white">Final Fantasi</td>
-                  <td class="px-6 py-4 text-white">04.51</td>
+                  <td class="px-6 py-4 text-white">60</td>
                   <td class="px-6 py-4">
                     <a
                       href="#"
@@ -425,7 +425,7 @@ import Accordion from "@/components/Accordion.vue";
                     Jazz & Chill
                   </td>
                   <td class="px-6 py-4 text-white">Joe Pass</td>
-                  <td class="px-6 py-4 text-white">03.59</td>
+                  <td class="px-6 py-4 text-white">85</td>
                   <td class="px-6 py-4">
                     <a
                       href="#"
