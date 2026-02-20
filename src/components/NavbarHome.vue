@@ -5,7 +5,7 @@ import pp from "@/assets/musiconprofile.jpg"
 </script>
 
 <template>
-    <div id="home_navbar" class="bg-nav p-3 flex items-center justify-between sticky top-0 z-10">
+    <div id="home_navbar" class="bg-nav p-3 flex items-center justify-between sticky top-0 z-50">
         <div>
             <img :src="logo" alt=""
             >

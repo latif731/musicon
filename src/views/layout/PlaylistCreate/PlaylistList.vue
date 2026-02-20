@@ -7,23 +7,27 @@ import playlist_1 from "@/assets/playlist1.png";
 import playlist_2 from "@/assets/playlist2.png";
 import playlist_3 from "@/assets/playlist3.png";
 import Accordion from "@/components/Accordion.vue";
+import edit from "@/assets/edit.png";
+import sampah from "@/assets/sampah.png";
+import play from "@/assets/PlayerIcons/play.png";
+import stop from "@/assets/stop.png";
 </script>
 
 <template>
-    <div v-if="false">
-      <div
-        class="text-white fixed flex justify-center items-center top-0 left-0 bg-logreg w-x h-y z-10 overflow-auto"
-      >
-        <!-- LOGIN PAGE -->
-        <Accordion />
-        <!-- REGISTER PAGE -->
-      </div>
+  <div v-if="false">
+    <div
+      class="text-white fixed flex justify-center items-center top-0 left-0 bg-logreg w-x h-y z-10 overflow-auto"
+    >
+      <!-- LOGIN PAGE -->
+      <Accordion />
+      <!-- REGISTER PAGE -->
     </div>
-    <div class="flex flex-col">
-      <h1 class="font-kontol font-700 text-[32px] text-white">
-        Created Playlist 
-      </h1>
-      <!-- <div class="flex mt-6 gap-20">
+  </div>
+  <div class="flex flex-col">
+    <h1 class="font-kontol font-700 text-[32px] text-white">
+      Created Playlist
+    </h1>
+    <!-- <div class="flex mt-6 gap-20">
         <div class="flex gap-4 items-center">
           <img class="w-[120px] h-[120px]" :src="music_1" alt="" />
           <div class="w-[595px]">
@@ -39,12 +43,12 @@ import Accordion from "@/components/Accordion.vue";
           <img :src="toggle" alt="" />
         </div>
       </div> -->
-      <div class="flex justify-end" v-if="true">
-        <button class="p-2 bg-[#FFFFFF] rounded-lg w-[190px]">
-          + Create Playlist
-        </button>
-      </div>
-      <!-- <div class="flex justify-end" v-if="false">
+    <div class="flex justify-end" v-if="true">
+      <button class="p-2 bg-[#FFFFFF] rounded-lg w-[190px]">
+        + Create Playlist
+      </button>
+    </div>
+    <!-- <div class="flex justify-end" v-if="false">
         <button class="p-2 bg-[#FFFFFF] rounded-lg w-[190px]">Close</button>
       </div>
       <div class="bg-[#1F1D2B] pb-5 pl-2 pt-2 pr-2 mt-5">
@@ -120,340 +124,324 @@ import Accordion from "@/components/Accordion.vue";
           </div>
         </div>
       </div> -->
-      <div class="flex-grow">
-        <div class="relative shadow-md sm:rounded-lg mt-4">
-          <div class="max-h-[320px] overflow-y-auto">
-            <table
-              class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 overflow-y-scroll"
+    <div class="flex-grow">
+      <div class="relative shadow-md sm:rounded-lg mt-4">
+        <div class="max-h-[320px] overflow-y-auto">
+          <table
+            class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 overflow-y-scroll"
+          >
+            <thead
+              class="text-xs sticky top-0 z-10 text-gray-700 uppercase bg-[#1F1D2B] border-b border-[#3C4156]"
             >
-              <thead
-                class="text-xs sticky top-0 z-10 text-gray-700 uppercase bg-[#1F1D2B] border-b border-[#3C4156]"
+              <tr>
+                <th scope="col" class="px-6 py-3 text-white normal-case">No</th>
+                <th scope="col" class="px-6 py-3 text-white normal-case">
+                  Title
+                </th>
+                <th scope="col" class="px-6 py-3 text-white normal-case">
+                  Total Song
+                </th>
+                <th scope="col" class="px-6 py-3 text-white normal-case">
+                  Date Created
+                </th>
+                <th scope="col" class="px-6 py-3 text-white normal-case">
+                  <span class="text">Action</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody v-if="true">
+              <tr
+                class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
               >
-                <tr>
-                  <th scope="col" class="px-6 py-3 text-white normal-case">
-                    No
-                  </th>
-                  <th scope="col" class="px-6 py-3 text-white normal-case">
-                    Title
-                  </th>
-                  <th scope="col" class="px-6 py-3 text-white normal-case">
-                    Total Song
-                  </th>
-                  <th scope="col" class="px-6 py-3 text-white normal-case">
-                    Date Created
-                  </th>
-                  <th scope="col" class="px-6 py-3 text-white normal-case">
-                    <span class="text">Action</span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody v-if="true">
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
                 >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
-                  >
-                    1
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Moon River
-                  </td>
-                  <td class="px-6 py-4 text-white font-kontol">235</td>
-                  <td class="px-6 py-4 text-white font-kontol">July 11, 2021</td>
-                  <td class="px-6 py-4">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >Edit
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >Edit
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >Edit
-                    </a>
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
+                </th>
+                <td class="px-1 py-4 flex items-center gap-4 text-white">
+                  <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
+                  Moon River
+                </td>
+                <td class="px-6 py-4 text-white font-kontol">235</td>
+                <td class="px-6 py-4 text-white font-kontol">July 11, 2021</td>
+                <td class="px-6 py-4 flex gap-3">
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    ><img :src="edit" alt="" />
+                  </a>
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    ><img :src="sampah" alt="" />
+                  </a>
+                </td>
+              </tr>
+              <tr
+                class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
+              >
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
                 >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-white w-[0px] whitespace-nowrap dark:text-white"
-                  >
-                    2
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Hollow
-                  </td>
-                  <td class="px-6 py-4 text-white">Final Fantasi</td>
-                  <td class="px-6 py-4 text-white">20</td>
-                  <td class="px-6 py-4">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 hover:bg-[#2D304D] dark:hover:bg-gray-600"
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
+                </th>
+                <td class="px-1 py-4 flex items-center gap-4 text-white">
+                  <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
+                  Moon River
+                </td>
+                <td class="px-6 py-4 text-white font-kontol">235</td>
+                <td class="px-6 py-4 text-white font-kontol">July 11, 2021</td>
+                <td class="px-6 py-4 flex gap-3">
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    ><img :src="edit" alt="" />
+                  </a>
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    ><img :src="sampah" alt="" />
+                  </a>
+                </td>
+              </tr>
+              <tr
+                class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
+              >
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
                 >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white"
-                  >
-                    3
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Jazz & Chill
-                  </td>
-                  <td class="px-6 py-4 text-white">Joe Pass</td>
-                  <td class="px-6 py-4 text-white">50</td>
-                  <td class="px-6 py-4">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
+                </th>
+                <td class="px-1 py-4 flex items-center gap-4 text-white">
+                  <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
+                  Moon River
+                </td>
+                <td class="px-6 py-4 text-white font-kontol">235</td>
+                <td class="px-6 py-4 text-white font-kontol">July 11, 2021</td>
+                <td class="px-6 py-4 flex gap-3">
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    ><img :src="edit" alt="" />
+                  </a>
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    ><img :src="sampah" alt="" />
+                  </a>
+                </td>
+              </tr>
+              <tr
+                class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
+              >
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
                 >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
-                  >
-                    1
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Moon River
-                  </td>
-                  <td class="px-6 py-4 text-white">Jacob Collier</td>
-                  <td class="px-6 py-4 text-white">25</td>
-                  <td class="px-6 py-4">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
+                </th>
+                <td class="px-1 py-4 flex items-center gap-4 text-white">
+                  <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
+                  Moon River
+                </td>
+                <td class="px-6 py-4 text-white font-kontol">150</td>
+                <td class="px-6 py-4 text-white font-kontol">July 15, 2021</td>
+                <td class="px-6 py-4 flex gap-3">
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    ><img :src="edit" alt="" />
+                  </a>
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    ><img :src="sampah" alt="" />
+                  </a>
+                </td>
+              </tr>
+              <tr
+                class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
+              >
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
                 >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-white w-[0px] whitespace-nowrap dark:text-white"
-                  >
-                    2
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Hollow
-                  </td>
-                  <td class="px-6 py-4 text-white">Final Fantasi</td>
-                  <td class="px-6 py-4 text-white">60</td>
-                  <td class="px-6 py-4">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 hover:bg-[#2D304D] dark:hover:bg-gray-600"
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
+                </th>
+                <td class="px-1 py-4 flex items-center gap-4 text-white">
+                  <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
+                  Moon River
+                </td>
+                <td class="px-6 py-4 text-white font-kontol">205</td>
+                <td class="px-6 py-4 text-white font-kontol">July 15, 2021</td>
+                <td class="px-6 py-4 flex gap-3">
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    ><img :src="edit" alt="" />
+                  </a>
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    ><img :src="sampah" alt="" />
+                  </a>
+                </td>
+              </tr>
+              <tr
+                class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
+              >
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
                 >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white"
-                  >
-                    3
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Jazz & Chill
-                  </td>
-                  <td class="px-6 py-4 text-white">Joe Pass</td>
-                  <td class="px-6 py-4 text-white">15</td>
-                  <td class="px-6 py-4">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
+                </th>
+                <td class="px-1 py-4 flex items-center gap-4 text-white">
+                  <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
+                  Moon River
+                </td>
+                <td class="px-6 py-4 text-white font-kontol">210</td>
+                <td class="px-6 py-4 text-white font-kontol">July 14, 2021</td>
+                <td class="px-6 py-4 flex gap-3">
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    ><img :src="edit" alt="" />
+                  </a>
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    ><img :src="sampah" alt="" />
+                  </a>
+                </td>
+              </tr>
+              <tr
+                class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
+              >
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
                 >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
-                  >
-                    1
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Moon River
-                  </td>
-                  <td class="px-6 py-4 text-white">Jacob Collier</td>
-                  <td class="px-6 py-4 text-white">120</td>
-                  <td class="px-6 py-4">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
+                </th>
+                <td class="px-1 py-4 flex items-center gap-4 text-white">
+                  <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
+                  Moon River
+                </td>
+                <td class="px-6 py-4 text-white font-kontol">230</td>
+                <td class="px-6 py-4 text-white font-kontol">July 13, 2021</td>
+                <td class="px-6 py-4 flex gap-3">
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    ><img :src="edit" alt="" />
+                  </a>
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    ><img :src="sampah" alt="" />
+                  </a>
+                </td>
+              </tr>
+              <tr
+                class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
+              >
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
                 >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-white w-[0px] whitespace-nowrap dark:text-white"
-                  >
-                    2
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Hollow
-                  </td>
-                  <td class="px-6 py-4 text-white">Final Fantasi</td>
-                  <td class="px-6 py-4 text-white">200</td>
-                  <td class="px-6 py-4">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 hover:bg-[#2D304D] dark:hover:bg-gray-600"
-                >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white"
-                  >
-                    3
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Jazz & Chill
-                  </td>
-                  <td class="px-6 py-4 text-white">Joe Pass</td>
-                  <td class="px-6 py-4 text-white">245</td>
-                  <td class="px-6 py-4">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
-                >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
-                  >
-                    1
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Moon River
-                  </td>
-                  <td class="px-6 py-4 text-white">Jacob Collier</td>
-                  <td class="px-6 py-4 text-white">35</td>
-                  <td class="px-6 py-4">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
-                >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-white w-[0px] whitespace-nowrap dark:text-white"
-                  >
-                    2
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Hollow
-                  </td>
-                  <td class="px-6 py-4 text-white">Final Fantasi</td>
-                  <td class="px-6 py-4 text-white">60</td>
-                  <td class="px-6 py-4">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 hover:bg-[#2D304D] dark:hover:bg-gray-600"
-                >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white"
-                  >
-                    3
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Jazz & Chill
-                  </td>
-                  <td class="px-6 py-4 text-white">Joe Pass</td>
-                  <td class="px-6 py-4 text-white">85</td>
-                  <td class="px-6 py-4">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >Edit</a
-                    >
-                  </td>
-                </tr>
-              </tbody>
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
+                </th>
+                <td class="px-1 py-4 flex items-center gap-4 text-white">
+                  <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
+                  Moon River
+                </td>
+                <td class="px-6 py-4 text-white font-kontol">225</td>
+                <td class="px-6 py-4 text-white font-kontol">July 12, 2021</td>
+                <td class="px-6 py-4 flex gap-3">
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    ><img :src="edit" alt="" />
+                  </a>
+                  <a
+                    href="#"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    ><img :src="sampah" alt="" />
+                  </a>
+                </td>
+              </tr>
+            </tbody>
 
-              <tbody v-if="false">
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
-                >
-                  <td colspan="5" class="text-center py-10 text-gray-400">
-                    Let’s Find Song for Your Playlist,<br />
-                    Please Click Add Song to Add New Song
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="text-center mt-8">
-          <!-- <button class="p-2 bg-[#FFFFFF] rounded-lg w-[500px]">
-            + Create 
-          </button> -->
+            <tbody v-if="false">
+              <tr
+                class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
+              >
+                <td colspan="5" class="text-center py-10 text-gray-400">
+                  Let’s Find Song for Your Playlist,<br />
+                  Please Click Add Song to Add New Song
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
+      <div class="text-center mt-8">
+        <!-- <button class="p-2 bg-[#FFFFFF] rounded-lg w-[500px]">
+            + Create 
+          </button> -->
+      </div>
     </div>
+  </div>
 </template>

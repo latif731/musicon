@@ -10,6 +10,8 @@ import Accordion from "@/components/Accordion.vue";
 import sampah from "@/assets/sampah.png";
 import like from "@/assets/love.png";
 import share from "@/assets/share.png";
+import play from "@/assets/PlayerIcons/play.png";
+import stop from "@/assets/stop.png";
 </script>
 
 <template>
@@ -154,7 +156,13 @@ import share from "@/assets/share.png";
                   scope="row"
                   class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
                 >
-                  1
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
                 </th>
                 <td class="px-1 py-4 flex items-center gap-4 text-white">
                   <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
@@ -187,7 +195,13 @@ import share from "@/assets/share.png";
                   scope="row"
                   class="px-6 py-4 font-medium text-white w-[0px] whitespace-nowrap dark:text-white"
                 >
-                  2
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
                 </th>
                 <td class="px-1 py-4 flex items-center gap-4 text-white">
                   <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
@@ -220,7 +234,13 @@ import share from "@/assets/share.png";
                   scope="row"
                   class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white"
                 >
-                  3
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
                 </th>
                 <td class="px-1 py-4 flex items-center gap-4 text-white">
                   <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
@@ -253,7 +273,13 @@ import share from "@/assets/share.png";
                   scope="row"
                   class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
                 >
-                  1
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
                 </th>
                 <td class="px-1 py-4 flex items-center gap-4 text-white">
                   <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
@@ -286,7 +312,13 @@ import share from "@/assets/share.png";
                   scope="row"
                   class="px-6 py-4 font-medium text-white w-[0px] whitespace-nowrap dark:text-white"
                 >
-                  2
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
                 </th>
                 <td class="px-1 py-4 flex items-center gap-4 text-white">
                   <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
@@ -319,7 +351,13 @@ import share from "@/assets/share.png";
                   scope="row"
                   class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white"
                 >
-                  3
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
                 </th>
                 <td class="px-1 py-4 flex items-center gap-4 text-white">
                   <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
@@ -352,7 +390,13 @@ import share from "@/assets/share.png";
                   scope="row"
                   class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
                 >
-                  1
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
                 </th>
                 <td class="px-1 py-4 flex items-center gap-4 text-white">
                   <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
@@ -385,7 +429,13 @@ import share from "@/assets/share.png";
                   scope="row"
                   class="px-6 py-4 font-medium text-white w-[0px] whitespace-nowrap dark:text-white"
                 >
-                  2
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
                 </th>
                 <td class="px-1 py-4 flex items-center gap-4 text-white">
                   <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
@@ -418,7 +468,13 @@ import share from "@/assets/share.png";
                   scope="row"
                   class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white"
                 >
-                  3
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
                 </th>
                 <td class="px-1 py-4 flex items-center gap-4 text-white">
                   <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
@@ -451,7 +507,13 @@ import share from "@/assets/share.png";
                   scope="row"
                   class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
                 >
-                  1
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
                 </th>
                 <td class="px-1 py-4 flex items-center gap-4 text-white">
                   <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
@@ -484,7 +546,13 @@ import share from "@/assets/share.png";
                   scope="row"
                   class="px-6 py-4 font-medium text-white w-[0px] whitespace-nowrap dark:text-white"
                 >
-                  2
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
                 </th>
                 <td class="px-1 py-4 flex items-center gap-4 text-white">
                   <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
@@ -517,7 +585,13 @@ import share from "@/assets/share.png";
                   scope="row"
                   class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white"
                 >
-                  3
+                  <div v-if="false">1</div>
+                  <div v-if="false">
+                    <img :src="play" alt="" />
+                  </div>
+                  <div v-if="true">
+                    <img :src="stop" alt="" />
+                  </div>
                 </th>
                 <td class="px-1 py-4 flex items-center gap-4 text-white">
                   <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
