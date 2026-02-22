@@ -4,7 +4,9 @@ import Home from "@/views/layout/Home.vue";
 import CreatePlaylist from "@/views/layout/PlaylistCreate/CreatePlaylist.vue";
 import PlaylistList from "@/views/layout/PlaylistCreate/PlaylistList.vue";
 import CreatePlaylistHome from "@/views/layout/PlaylistCreate/CreatePlaylistHome.vue";
-import Playlist from "@/views/layout/Playlist.vue";
+import Playlist from "@/views/layout/playlist/Playlist.vue";
+import PlaylistCollection from "@/views/layout/playlist/PlaylistCollection.vue";
+import PlaylistHome from "@/views/layout/playlist/PlaylistHome.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -37,8 +39,19 @@ const router = createRouter({
     },
     {
       path: "/playlist",
-      name: "playlist",
-      component: Playlist,
+      component: PlaylistHome,
+      children:[
+        {
+          path:"",
+          name: "playlist",
+          component: Playlist
+        },
+        {
+          path:"collection",
+          name:"playlist_collection",
+          component:PlaylistCollection,
+        }
+      ]
     },
   ],
 });

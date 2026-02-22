@@ -55,7 +55,7 @@ watch([showLogin, showRegister], ([login, register]) => {
         <!-- </div> -->
       <!-- </div> -->
       <div>
-        <div v-if="false">
+        <div v-if="true">
           <h1 class="text-[32px] font-kontol font-[700] text-white">Your Playlist</h1>  
           <div class="mt-8 flex gap-10">
             <PlaylistCard/>
