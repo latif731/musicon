@@ -12,6 +12,10 @@ import like from "@/assets/love.png";
 import share from "@/assets/share.png";
 import play from "@/assets/PlayerIcons/play.png";
 import stop from "@/assets/stop.png";
+import platlist1 from "@/assets/playlist1.png";
+import platlist2 from "@/assets/playlist2.png";
+import platlist3 from "@/assets/playlist3.png";
+import platlist4 from "@/assets/playlist4.png";
 </script>
 
 <template>
@@ -26,31 +30,63 @@ import stop from "@/assets/stop.png";
   </div>
   <div class="flex flex-col">
     <h1 class="font-kontol font-700 text-[32px] text-white">
-      Created Playlist / Anime Songs
+      Playlist / Anime Collection
     </h1>
-    <div class="flex mt-6 gap-20">
-      <div class="flex gap-4 items-center">
-        <img class="w-[120px] h-[120px]" :src="music_1" alt="" />
-        <div class="w-[595px]">
-          <p class="font-kontol font-700 text-white">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-            autem eveniet optio, consectetur, est earum tempore at, sed quod
-            dolorem voluptate id obcaecati eaque perspiciatis adipisci nesciunt!
-            Sed, mollitia repellendus!
-          </p>
+    <div class="flex gap-10 items-center mt-10">
+      <div
+        class="w-[125px] h-[125px] bg-[#1F1D2B] rounded-[8px] flex flex-wrap gap-1"
+      >
+        <div class="w-[60px]">
+          <img :src="platlist1" alt="" />
+        </div>
+        <div class="w-[60px]">
+          <img :src="platlist2" alt="" />
+        </div>
+        <div class="w-[60px]">
+          <img :src="platlist3" alt="" />
+        </div>
+        <div class="w-[60px]">
+          <img :src="platlist4" alt="" />
         </div>
       </div>
-      <div>
-        <img :src="toggle" alt="" />
+      <div class="w-[595px]">
+        <p class="font-kontol font-700 text-white">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+          autem eveniet optio, consectetur, est earum tempore at, sed quod
+          dolorem voluptate id obcaecati eaque perspiciatis adipisci nesciunt!
+          Sed, mollitia repellendus!
+        </p>
+        <div class="flex mt-3 gap-5 items-center">
+          <p class="text-white">
+            By
+            <span class="font-kontol text-white font-[700]"
+              >Irham Raziqony</span
+            >
+          </p>
+          <div
+            class="boder border-[#3C4156] rounded-lg w-2 h-2 bg-[#3C4156]"
+          ></div>
+          <p class="text-[#92929D] font-kontol font-[400]">15 Songs</p>
+          <div
+            class="boder border-[#3C4156] rounded-lg w-2 h-2 bg-[#3C4156]"
+          ></div>
+          <p class="text-[#92929D] font-kontol font-[400]">About 2 hr 12 min</p>
+        </div>
       </div>
     </div>
-    <div class="flex justify-end" v-if="true">
+    <div
+      class="border border-[#1F1D2B] bg-[#1F1D2B] rounded-[8px] w-[185px] h-[107px] absolute right-[150px] top-[180px]"
+    >
+      <p class="font-kontol font-[700] text-[20px] border-b border-b-[#3C4156] text-white pt-4 pb-3 text-center">Give Rating</p>
+
+    </div>
+    <!-- <div class="flex justify-end" v-if="true">
       <button class="p-2 bg-[#FFFFFF] rounded-lg w-[190px]">+ Add Song</button>
-    </div>
-    <div class="flex justify-end" v-if="false">
+    </div> -->
+    <!-- <div class="flex justify-end" v-if="false">
       <button class="p-2 bg-[#FFFFFF] rounded-lg w-[190px]">Close</button>
-    </div>
-    <div class="bg-[#1F1D2B] pb-5 pl-2 pt-2 pr-2 mt-5">
+    </div> -->
+    <!-- <div class="bg-[#1F1D2B] pb-5 pl-2 pt-2 pr-2 mt-5">
       <h2 class="text-white font-[500] text-[18px] font-kontol p-3">
         Let’s find song for your playlist
       </h2>
@@ -122,10 +158,10 @@ import stop from "@/assets/stop.png";
           </button>
         </div>
       </div>
-    </div>
-    <div class="flex-grow">
+    </div> -->
+    <div class="flex-grow mt-10">
       <div class="relative shadow-md sm:rounded-lg mt-4">
-        <div class="max-h-[320px] overflow-y-auto">
+        <div class="max-h-[500px] overflow-y-auto">
           <table
             class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 overflow-y-scroll"
           >
@@ -633,7 +669,7 @@ import stop from "@/assets/stop.png";
         </div>
       </div>
       <div class="text-center mt-8">
-        <button class="p-2 bg-[#FFFFFF] rounded-lg w-[500px]">+ Create</button>
+        <!-- <button class="p-2 bg-[#FFFFFF] rounded-lg w-[500px]">+ Create</button> -->
       </div>
     </div>
   </div>
