@@ -8,7 +8,8 @@ export default {
     extend: {
       fontFamily:{
         kontol: ['DM Sans', 'sans-serif'],
-        tempek:['Poppins', 'sans-serif']
+        tempek:['Poppins', 'sans-serif'],
+        josjis:['Roboto'],
       },
       backgroundColor:{
         'nav': 'rgba(31, 29, 43, 1)',
