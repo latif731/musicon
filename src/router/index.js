@@ -7,6 +7,7 @@ import CreatePlaylistHome from "@/views/layout/PlaylistCreate/CreatePlaylistHome
 import Playlist from "@/views/layout/playlist/Playlist.vue";
 import PlaylistCollection from "@/views/layout/playlist/PlaylistCollection.vue";
 import PlaylistHome from "@/views/layout/playlist/PlaylistHome.vue";
+import Profile from "@/views/layout/MyProfile/Profile.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -52,6 +53,11 @@ const router = createRouter({
           component:PlaylistCollection,
         }
       ]
+    },
+        {
+      path: "/profile",
+      name: "main_profile",
+      component: Profile,
     },
   ],
 });
