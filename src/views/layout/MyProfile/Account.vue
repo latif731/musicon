@@ -18,61 +18,64 @@ const showPassword = ref(false);
           Change Password
         </h1>
         <div class="p-2">
-          <form action="">
-            <h6 class="text-white pb-2 pt-5 font-kontol font-[700] text-[16px]">
-              Current Password
-            </h6>
-            <div class="relative">
-              <input
-                v-model="password"
-                placeholder="Input your current password"
-                :type="showPassword ? 'text' : 'password'"
-                class="w-[694px] h-[41px] rounded-[4px] bg-[#3C4156] text-white pl-2 pb-1"
-              />
-              <button
-                type="button"
-                @click="showPassword = !showPassword"
-                class="absolute right-6 top-2 text-abuabu"
-              >
-                <font-awesome-icon :icon="showPassword ? 'eye' : 'eye-slash'" />
-              </button>
+          <form action="" class=" h-[350px] w-[730px] relative">
+            <div class="w-[700px]">
+              <h6 class="text-white pb-2 pt-5 font-kontol font-[700] text-[16px]">
+                Current Password
+              </h6>
+              <div class="relative">
+                <input
+                  v-model="password"
+                  placeholder="Input your current password"
+                  :type="showPassword ? 'text' : 'password'"
+                  class="w-[694px] h-[41px] rounded-[4px] bg-[#3C4156] text-white pl-2 pb-1"
+                />
+                <button
+                  type="button"
+                  @click="showPassword = !showPassword"
+                  class="absolute right-6 top-2 text-abuabu"
+                >
+                  <font-awesome-icon :icon="showPassword ? 'eye' : 'eye-slash'" />
+                </button>
+              </div>
+              <h6 class="text-white pb-2 pt-2 font-kontol font-[700] text-[16px]">
+                New Password
+              </h6>
+              <div class="relative">
+                <input
+                  v-model="password"
+                  placeholder="Input your new password"
+                  :type="showPassword ? 'text' : 'password'"
+                  class="w-[694px] h-[41px] rounded-[4px] bg-[#3C4156] text-white pl-2 pb-1"
+                />
+                <button
+                  type="button"
+                  @click="showPassword = !showPassword"
+                  class="absolute right-6 top-2 text-abuabu"
+                >
+                  <font-awesome-icon :icon="showPassword ? 'eye' : 'eye-slash'" />
+                </button>
+              </div>
+              <h6 class="text-white pb-2 pt-2 font-kontol font-[700] text-[16px]">
+                Confirm Password
+              </h6>
+              <div class="relative">
+                <input
+                  v-model="password"
+                  placeholder="Confirm new password"
+                  :type="showPassword ? 'text' : 'password'"
+                  class="w-[694px] h-[41px] rounded-[4px] bg-[#3C4156] text-white pl-2 pb-1"
+                />
+                <button
+                  type="button"
+                  @click="showPassword = !showPassword"
+                  class="absolute right-6 top-2 text-abuabu"
+                >
+                  <font-awesome-icon :icon="showPassword ? 'eye' : 'eye-slash'" />
+                </button>
+              </div>
             </div>
-            <h6 class="text-white pb-2 pt-2 font-kontol font-[700] text-[16px]">
-              New Password
-            </h6>
-            <div class="relative">
-              <input
-                v-model="password"
-                placeholder="Input your new password"
-                :type="showPassword ? 'text' : 'password'"
-                class="w-[694px] h-[41px] rounded-[4px] bg-[#3C4156] text-white pl-2 pb-1"
-              />
-              <button
-                type="button"
-                @click="showPassword = !showPassword"
-                class="absolute right-6 top-2 text-abuabu"
-              >
-                <font-awesome-icon :icon="showPassword ? 'eye' : 'eye-slash'" />
-              </button>
-            </div>
-            <h6 class="text-white pb-2 pt-2 font-kontol font-[700] text-[16px]">
-              Confirm Password
-            </h6>
-            <div class="relative">
-              <input
-                v-model="password"
-                placeholder="Confirm new password"
-                :type="showPassword ? 'text' : 'password'"
-                class="w-[694px] h-[41px] rounded-[4px] bg-[#3C4156] text-white pl-2 pb-1"
-              />
-              <button
-                type="button"
-                @click="showPassword = !showPassword"
-                class="absolute right-6 top-2 text-abuabu"
-              >
-                <font-awesome-icon :icon="showPassword ? 'eye' : 'eye-slash'" />
-              </button>
-            </div>
+            <button class="text-white bg-gradient-to-r absolute from-right to-left w-[142px] rounded-[20px] h-[43px] right-1 bottom-1">Save Changes</button>
           </form>
         </div>
       </div>
