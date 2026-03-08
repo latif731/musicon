@@ -1,7 +1,7 @@
 <template>
   <div>
     <Layout>
-      <div class="max-w-6xl mx-auto py-10 px-6">
+      <div class="max-w-6xl mx-auto py-10 px-6 text-white">
         <!-- Header -->
         <div class="flex gap-8 items-center mb-10">
           <!-- Cover -->
@@ -41,15 +41,15 @@
         </div>
 
         <!-- Table -->
-        <div class="border rounded-xl overflow-hidden">
+        <div class="rounded-xl max-h-[600px] overflow-y-auto custom-scroll ">
           <table class="w-full text-sm">
-            <thead class="bg-gray-50 text-gray-500 text-xs uppercase">
+            <thead class="text-white  text-xs uppercase bg-[#1F1D2B] border-b border-[#3C4156]">
               <tr>
-                <th class="text-left px-6 py-4 w-10">#</th>
-                <th class="text-left px-6 py-4">Title</th>
-                <th class="text-left px-6 py-4">Album</th>
+                <th class="text-left px-6 py-4 w-10 text-white">#</th>
+                <th class="text-left px-6 py-4 text-white">Title</th>
+                <th class="text-left px-6 py-4 text-white">Album</th>
                 <th class="text-left px-6 py-4 w-20">
-                  <ClockIcon class="w-4" />
+                  <ClockIcon class="w-4 text-white" />
                 </th>
                 <th class="px-6 py-4 w-16"></th>
               </tr>
@@ -59,9 +59,9 @@
               <tr
                 v-for="(song, i) in songs"
                 :key="song.id"
-                class="hover:bg-gray-50"
+                class="hover:bg-[#2D304D] bg-[#1F1D2B]"
               >
-                <td class="px-6 py-4 text-gray-500">
+                <td class="px-6 py-4 text-white">
                   {{ i + 1 }}
                 </td>
 
@@ -81,16 +81,16 @@
                   </div>
                 </td>
 
-                <td class="px-6 py-4 text-gray-600">
+                <td class="px-6 py-4 text-white">
                   {{ song.album }}
                 </td>
 
-                <td class="px-6 py-4 text-gray-500">
+                <td class="px-6 py-4 text-white">
                   {{ song.duration }}
                 </td>
 
                 <td class="px-6 py-4 text-center">
-                  <HeartIcon class="w-5 text-black cursor-pointer" />
+                  <HeartIcon class="w-5 text-red-600 cursor-pointer" />
                 </td>
               </tr>
             </tbody>
@@ -179,3 +179,22 @@ const songs = ref([
   },
 ]);
 </script>
+
+<style>
+.custom-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #3C4156;
+  border-radius: 999px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #6B7280;
+}
+</style>
