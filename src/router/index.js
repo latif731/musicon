@@ -9,6 +9,8 @@ import PlaylistCollection from "@/views/layout/playlist/PlaylistCollection.vue";
 import PlaylistHome from "@/views/layout/playlist/PlaylistHome.vue";
 import Profile from "@/views/layout/MyProfile/Profile.vue";
 import Account from "@/views/layout/MyProfile/Account.vue";
+import Browse from "@/views/layout/Browse.vue";
+import LikedSong from "@/views/layout/LikedSong.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -63,6 +65,16 @@ const router = createRouter({
       path: "/account",
       name: "main_account",
       component: Account,
+    },
+    {
+      path: "/browse",
+      name: "main_browse",
+      component: Browse,
+    },
+    {
+      path: "/likedsong",
+      name: "main_like",
+      component: LikedSong,
     },
   ],
 });

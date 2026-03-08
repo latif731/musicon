@@ -12,7 +12,7 @@ import strip from "@/assets/strip.png";
 
 <template>
   <div class="text-white font-kontol font-[700] text-[32px]">
-    <h1>PLaylist</h1>
+    <h1>Playlist</h1>
   </div>
   <div class="flex mt-20 flex-wrap gap-11">
     <div>
@@ -311,4 +311,6 @@ import strip from "@/assets/strip.png";
   </div>
 </template>
 
-<style></style>
+<style>
+
+</style>

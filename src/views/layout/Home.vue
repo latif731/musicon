@@ -8,7 +8,7 @@ import { ref, watch } from "vue";
 import Register from "./LoginRegisterPage/Register.vue";
 import Accordion from "@/components/Accordion.vue";
 
-const showLogin = ref(true)
+const showLogin = ref(false)
 const showRegister = ref(false)
 
 const createPlaylist = ref(true)

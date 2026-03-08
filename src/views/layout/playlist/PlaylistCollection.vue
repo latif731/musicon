@@ -248,7 +248,7 @@ import platlist4 from "@/assets/playlist4.png";
     </div> -->
     <div class="flex-grow mt-10">
       <div class="relative shadow-md sm:rounded-lg mt-4">
-        <div class="max-h-[500px] overflow-y-auto">
+        <div class="max-h-[500px] overflow-y-auto custom-scroll rounded-[8px]">
           <table
             class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 overflow-y-scroll"
           >
@@ -761,3 +761,22 @@ import platlist4 from "@/assets/playlist4.png";
     </div>
   </div>
 </template>
+
+<style>
+.custom-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #3C4156;
+  border-radius: 999px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #6B7280;
+}
+</style>
