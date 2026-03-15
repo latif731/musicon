@@ -11,6 +11,8 @@ import Profile from "@/views/layout/MyProfile/Profile.vue";
 import Account from "@/views/layout/MyProfile/Account.vue";
 import Browse from "@/views/layout/Browse.vue";
 import LikedSong from "@/views/layout/LikedSong.vue";
+import Allgenre from "@/views/layout/All/Allgenre.vue";
+import Search from "@/views/layout/Search.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -75,6 +77,16 @@ const router = createRouter({
       path: "/likedsong",
       name: "main_like",
       component: LikedSong,
+    },
+    {
+      path: "/view-all/genres",
+      name: "view_all_genres",
+      component: Allgenre,
+    },
+    {
+      path: "/search",
+      name: "search",
+      component: Search,
     },
   ],
 });
