@@ -157,23 +157,81 @@ watch(
 //   }
 // });
 
+// let timeout;
+
+// watch(searchText, (value) => {
+//   clearTimeout(timeout);
+
+//   timeout = setTimeout(() => {
+//     if (route.name !== "search") {
+//       router.push({
+//         name: "search",
+//         query: { q: value },
+//       });
+//     } else {
+//       router.replace({
+//         query: { q: value },
+//       });
+//     }
+//   }, 4000);
+// });
+
+
+// watch(searchText, (value) => {
+//   clearTimeout(timeout);
+
+//   timeout = setTimeout(() => {
+//     const trimmed = value.trim();
+
+//     // 🔴 Jika input kosong kembali ke home
+//     if (!trimmed) {
+//       if (route.name !== "main_home") {
+//         router.push({ name: "main_home" });
+//       }
+//       return;
+//     }
+
+//     // 🟢 Jika ada text lakukan search
+//     if (route.name !== "search") {
+//       router.push({
+//         name: "search",
+//         query: { q: trimmed },
+//       });
+//     } else {
+//       router.replace({
+//         query: { q: trimmed },
+//       });
+//     }
+//   }, 500); 
+// });
+
+
 let timeout;
 
 watch(searchText, (value) => {
   clearTimeout(timeout);
 
   timeout = setTimeout(() => {
+    const trimmed = value.trim();
+
+    if (!trimmed) {
+      if (route.name !== "home") {
+        router.push({ name: "main_home" });
+      }
+      return;
+    }
+
     if (route.name !== "search") {
       router.push({
         name: "search",
-        query: { q: value },
+        query: { q: trimmed },
       });
     } else {
       router.replace({
-        query: { q: value },
+        query: { q: trimmed },
       });
     }
-  }, 300); // tunggu 300ms
+  }, 1000);
 });
 </script>
 
@@ -196,6 +254,8 @@ watch(searchText, (value) => {
         type="text"
         class="w-[859px] outline-none pl-2 bg-[#21242E] rounded-[8px] text-white"
         placeholder="search"
+        autocomplete="off"
+        spellcheck="false"
       />
     </div>
     <div ref="dropdownRef" class="relative inline-block">
