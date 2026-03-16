@@ -13,6 +13,7 @@ import Browse from "@/views/layout/Browse.vue";
 import LikedSong from "@/views/layout/LikedSong.vue";
 import Allgenre from "@/views/layout/All/Allgenre.vue";
 import Search from "@/views/layout/Search.vue";
+import Genre from "@/views/layout/Genre.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -87,6 +88,11 @@ const router = createRouter({
       path: "/search",
       name: "search",
       component: Search,
+    },
+    {
+      path: "/genre/:name",
+      name: "genre",
+      component: Genre,
     },
   ],
 });
