@@ -12,12 +12,12 @@ const results = ref([]);
 
 /* DATA SEMENTARA */
 const songs = [
-  { id: 1, title: "Nightmare", artist: "Avenged Sevenfold" },
-  { id: 2, title: "Hail to the King", artist: "Avenged Sevenfold" },
-  { id: 3, title: "Bat Country", artist: "Avenged Sevenfold" },
-  { id: 4, title: "Throne", artist: "Bring Me The Horizon" },
-  { id: 5, title: "Duality", artist: "Slipknot" },
-  { id: 6, title: "Numb", artist: "Linkin Park" },
+  { id: 1, title: "Nightmare", artist: "Avenged Sevenfold", img:"https://i.pinimg.com/1200x/35/cd/71/35cd71c65df90a4d9a1b2e86668ebafd.jpg" },
+  { id: 2, title: "Hail to the King", artist: "Avenged Sevenfold", img:"https://i.pinimg.com/1200x/e3/08/bd/e308bd9e51213466036abb3da96ab553.jpg" },
+  { id: 3, title: "Bat Country", artist: "Avenged Sevenfold",img:"https://i.pinimg.com/736x/75/a9/70/75a9705af53ba0f96c892fe0ccf7b3b4.jpg" },
+  { id: 4, title: "Throne", artist: "Bring Me The Horizon",img:"https://i.pinimg.com/736x/12/a4/3d/12a43d9937e05a2d5e221c976b53be7c.jpg" },
+  { id: 5, title: "Duality", artist: "Slipknot", img:"https://i.pinimg.com/1200x/55/b9/12/55b912f329b5d090257f90dc8aae8e09.jpg" },
+  { id: 6, title: "Numb", artist: "Linkin Park", img:"https://i.pinimg.com/1200x/75/d6/13/75d613483c28575a1bae2c36b674de41.jpg" },
 ];
 
 /* SEARCH */
@@ -77,7 +77,9 @@ const topResult = () => {
             <h2 class="text-xl font-bold mb-4">Top Result</h2>
 
             <div class="flex items-center gap-4">
-              <div class="w-24 h-24 bg-neutral-700 rounded"></div>
+              <div class="w-24 h-24 bg-neutral-700 rounded">
+                <img src="https://i.pinimg.com/736x/a4/bc/7b/a4bc7b7e74fc8b7f99ad2b407496e73c.jpg" alt="">
+              </div>
 
               <div>
                 <h3 class="text-2xl font-bold">
@@ -102,7 +104,9 @@ const topResult = () => {
                 class="flex items-center justify-between p-3 rounded hover:bg-neutral-800 transition cursor-pointer"
               >
                 <div class="flex items-center gap-4">
-                  <div class="w-10 h-10 bg-neutral-700 rounded"></div>
+                  <div class="w-10 h-10 bg-neutral-700 rounded">
+                    <img :src="song.img" alt="">
+                  </div>
 
                   <div>
                     <p class="text-sm font-medium">
@@ -134,7 +138,9 @@ const topResult = () => {
               :key="song.id"
               class="bg-neutral-900 p-4 rounded-lg hover:bg-neutral-800 transition"
             >
-              <div class="w-full h-32 bg-neutral-700 rounded-full mb-3"></div>
+              <div class="w-full h-32 bg-neutral-700 rounded-full mb-3">
+                <img :src="song.img" alt="" class="object-cover h-32 w-full  rounded-full">
+              </div>
 
               <h3 class="text-sm font-semibold text-center">
                 {{ song.artist }}
