@@ -70,7 +70,7 @@ const topResult = () => {
       <div v-else>
 
         <!-- TOP RESULT + SONGS -->
-        <div class="grid grid-cols-2 gap-8 mb-12">
+      <div class="grid grid-cols-2 gap-8 mb-12">
 
           <!-- TOP RESULT -->
           <div v-if="topResult()" class="bg-neutral-900 p-6 rounded-lg hover:bg-neutral-800 transition">
