@@ -132,7 +132,7 @@ const relatedGenres = computed(() =>
         <!-- =========================
              RELATED GENRES
         ========================== -->
-        <h2 class="text-xl font-semibold mb-4">Related Genres</h2>
+        <!-- <h2 class="text-xl font-semibold mb-4">Related Genres</h2>
         <div class="flex gap-4">
           <router-link
             v-for="genre in relatedGenres"
@@ -142,7 +142,7 @@ const relatedGenres = computed(() =>
           >
             {{ genre.name }}
           </router-link>
-        </div>
+        </div> -->
 
       </div>
     </div>
