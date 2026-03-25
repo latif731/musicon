@@ -78,6 +78,18 @@ const genres = ref([
     image:
       "https://images.unsplash.com/photo-1762704452358-1a65ea252529?q=80&w=400",
   },
+  {
+    name: "Reggae",
+    category: "Popular",
+    image:
+      "https://i.pinimg.com/736x/08/89/b4/0889b4fd56020961be0a6a7b29dfc078.jpg",
+  },
+  {
+    name: "Dangdut",
+    category: "Popular",
+    image:
+      "https://i.pinimg.com/1200x/ca/67/6d/ca676dca5b178aa15b246867d6ef158d.jpg",
+  },
 ]);
 
 /* FILTER */

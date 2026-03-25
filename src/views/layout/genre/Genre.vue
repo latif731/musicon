@@ -133,13 +133,13 @@ const genres = {
     ],
     relatedGenres: [
       {
-        name: "Indie Pop",
+        name: "Teen Pop",
         color: "bg-lime-500",
         image:
           "https://images.unsplash.com/photo-1612626825467-aa49b72116ce?q=80&w=400",
       },
       {
-        name: "Electro Pop",
+        name: "K-Pop",
         color: "bg-blue-500",
         image:
           "https://images.unsplash.com/photo-1653569397438-60c2a42a265b?q=80&w=400",
@@ -279,25 +279,25 @@ const genres = {
     ],
     relatedGenres: [
       {
-        name: "Trap",
+        name: "Conscious Rap",
         color: "bg-red-600",
         image:
           "https://images.unsplash.com/photo-1583022312757-2d9b628ef788?q=80&w=400",
       },
       {
-        name: "R&B",
+        name: "Trap",
         color: "bg-orange-600",
         image:
           "https://images.unsplash.com/photo-1562065417-7b776d5b9c4a?q=80&w=400",
       },
       {
-        name: "Lo-fi Hip Hop",
+        name: "Drill",
         color: "bg-purple-600",
         image:
           "https://images.unsplash.com/photo-1679718890686-7f16f411b460?q=80&w=400",
       },
       {
-        name: "Drill",
+        name: "Gangsta Rap",
         color: "bg-zinc-900",
         image:
           "https://images.unsplash.com/photo-1653473672408-5d2d68fa1278?q=80&w=400",
@@ -571,7 +571,7 @@ const genres = {
     ],
     relatedGenres: [
       {
-        name: "Blues",
+        name: "Cool Jazz",
         color: "bg-sky-900",
         image:
           "https://images.unsplash.com/photo-1762704452358-1a65ea252529?q=80&w=400",
@@ -723,19 +723,19 @@ const genres = {
           "https://images.unsplash.com/photo-1653473672408-5d2d68fa1278?q=80&w=400",
       },
       {
-        name: "Punk",
+        name: "Punk Rock",
         color: "bg-rose-700",
         image:
           "https://images.unsplash.com/photo-1768264229383-4a0756555c95?q=80&w=400",
       },
       {
-        name: "Alternative",
+        name: "Hard Rock",
         color: "bg-lime-600",
         image:
           "https://images.unsplash.com/photo-1612626825467-aa49b72116ce?q=80&w=400",
       },
       {
-        name: "Grunge",
+        name: "Alternative Rock",
         color: "bg-stone-700",
         image:
           "https://images.unsplash.com/photo-1718044405588-dcfbba2a02b1?q=80&w=400",
@@ -888,9 +888,1047 @@ const genres = {
       },
     ],
   },
+  indie: {
+  name: "Indie",
+  description:
+    "Independent music characterized by creative freedom, unique sound, and a blend of alternative, folk, rock, and electronic influences.",
+  color: "bg-purple-600",
+  gradient: "from-purple-600/20 to-pink-600/20",
+  image:
+    "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1600",
+  coverImage:
+    "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=1600",
+
+  stats: {
+    followers: "180M",
+    songs: "2M+",
+    artists: "500K+",
+  },
+
+  topSongs: [
+    {
+      id: 1,
+      title: "Sweater Weather",
+      artist: "The Neighbourhood",
+      plays: "2.1B",
+      duration: "4:00",
+      image:
+        "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=400",
+    },
+    {
+      id: 2,
+      title: "Riptide",
+      artist: "Vance Joy",
+      plays: "1.5B",
+      duration: "3:24",
+      image:
+        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=400",
+    },
+    {
+      id: 3,
+      title: "Electric Feel",
+      artist: "MGMT",
+      plays: "900M",
+      duration: "3:49",
+      image:
+        "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=400",
+    },
+    {
+      id: 4,
+      title: "505",
+      artist: "Arctic Monkeys",
+      plays: "1.2B",
+      duration: "4:13",
+      image:
+        "https://images.unsplash.com/photo-1507878866276-a947ef722fee?q=80&w=400",
+    },
+    {
+      id: 5,
+      title: "Take Me Out",
+      artist: "Franz Ferdinand",
+      plays: "800M",
+      duration: "3:59",
+      image:
+        "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?q=80&w=400",
+    },
+  ],
+
+  topArtists: [
+    {
+      id: "arctic-monkeys",
+      name: "Arctic Monkeys",
+      followers: "35M",
+      image:
+        "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=400",
+    },
+    {
+      id: "tame-impala",
+      name: "Tame Impala",
+      followers: "28M",
+      image:
+        "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=400",
+    },
+    {
+      id: "phoebe-bridgers",
+      name: "Phoebe Bridgers",
+      followers: "12M",
+      image:
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400",
+    },
+  ],
+
+  relatedGenres: [
+    {
+      name: "Indie Pop",
+      color: "bg-pink-600",
+      image:
+        "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?q=80&w=400",
+    },
+    {
+      name: "Indie Rock",
+      color: "bg-red-600",
+      image:
+        "https://images.unsplash.com/photo-1507878866276-a947ef722fee?q=80&w=400",
+    },
+    {
+      name: "Indie Folk",
+      color: "bg-indigo-600",
+      image:
+        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=400",
+    },
+    {
+      name: "Dream Pop",
+      color: "bg-gray-600",
+      image:
+        "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=400",
+    },
+  ],
+},
+classical: {
+  name: "Classical",
+  description:
+    "Timeless orchestral and instrumental music rooted in Western traditions, featuring composers from the Baroque, Classical, and Romantic eras.",
+
+  color: "bg-amber-600",
+  gradient: "from-amber-600/20 to-yellow-600/20",
+
+  image:
+    "https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=1600",
+  coverImage:
+    "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=1600",
+
+  stats: {
+    followers: "90M",
+    songs: "3M+",
+    artists: "120K+",
+  },
+
+  featuredPlaylists: [
+    {
+      id: 1,
+      title: "Peaceful Piano",
+      curator: "Classical",
+      songs: 120,
+      image:
+        "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?q=80&w=400",
+    },
+    {
+      id: 2,
+      title: "Deep Focus",
+      curator: "Study",
+      songs: 100,
+      image:
+        "https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=400",
+    },
+    {
+      id: 3,
+      title: "Classical Essentials",
+      curator: "Orchestra",
+      songs: 90,
+      image:
+        "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=400",
+    },
+    {
+      id: 4,
+      title: "Baroque Favorites",
+      curator: "History",
+      songs: 80,
+      image:
+        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=400",
+    },
+  ],
+
+  topSongs: [
+    {
+      id: 1,
+      title: "Für Elise",
+      artist: "Ludwig van Beethoven",
+      plays: "1.8B",
+      duration: "3:25",
+      image:
+        "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?q=80&w=400",
+    },
+    {
+      id: 2,
+      title: "Canon in D",
+      artist: "Johann Pachelbel",
+      plays: "1.5B",
+      duration: "5:00",
+      image:
+        "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=400",
+    },
+    {
+      id: 3,
+      title: "The Four Seasons: Spring",
+      artist: "Antonio Vivaldi",
+      plays: "1.3B",
+      duration: "3:40",
+      image:
+        "https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=400",
+    },
+    {
+      id: 4,
+      title: "Nocturne Op.9 No.2",
+      artist: "Frédéric Chopin",
+      plays: "1.1B",
+      duration: "4:30",
+      image:
+        "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?q=80&w=400",
+    },
+    {
+      id: 5,
+      title: "Clair de Lune",
+      artist: "Claude Debussy",
+      plays: "1.4B",
+      duration: "5:10",
+      image:
+        "https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=400",
+    },
+  ],
+
+  topArtists: [
+    {
+      id: "beethoven",
+      name: "Ludwig van Beethoven",
+      followers: "20M",
+      image:
+        "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=400",
+    },
+    {
+      id: "mozart",
+      name: "Wolfgang Amadeus Mozart",
+      followers: "18M",
+      image:
+        "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=400",
+    },
+    {
+      id: "chopin",
+      name: "Frédéric Chopin",
+      followers: "15M",
+      image:
+        "https://images.unsplash.com/photo-1511367461989-f85a21fda167?q=80&w=400",
+    },
+  ],
+
+  relatedGenres: [
+    {
+      name: "Contemporary Classical",
+      color: "bg-yellow-700",
+      image:
+        "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=400",
+    },
+    {
+      name: "Opera",
+      color: "bg-rose-600",
+      image:
+        "https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=400",
+    },
+    {
+      name: "Chamber Music",
+      color: "bg-purple-700",
+      image:
+        "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=400",
+    },
+    {
+      name: "Symphony",
+      color: "bg-gray-600",
+      image:
+        "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?q=80&w=400",
+    },
+  ],
+},
+"r&b": {
+  name: "R&B",
+  description:
+    "Smooth and soulful music blending rhythm, blues, and modern pop influences, known for emotional vocals, groove, and rich production.",
+
+  color: "bg-rose-600",
+  gradient: "from-rose-600/20 to-pink-600/20",
+
+  image:
+    "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1600",
+  coverImage:
+    "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1600",
+
+  stats: {
+    followers: "220M",
+    songs: "2.5M+",
+    artists: "300K+",
+  },
+
+  featuredPlaylists: [
+    {
+      id: 1,
+      title: "R&B Essentials",
+      curator: "Spotify",
+      songs: 120,
+      image:
+        "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=400",
+    },
+    {
+      id: 2,
+      title: "Chill R&B",
+      curator: "Mood",
+      songs: 100,
+      image:
+        "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=400",
+    },
+    {
+      id: 3,
+      title: "Late Night Vibes",
+      curator: "Night",
+      songs: 90,
+      image:
+        "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=400",
+    },
+    {
+      id: 4,
+      title: "90s R&B Classics",
+      curator: "Throwback",
+      songs: 80,
+      image:
+        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=400",
+    },
+  ],
+
+  topSongs: [
+    {
+      id: 1,
+      title: "Blinding Lights",
+      artist: "The Weeknd",
+      plays: "3.8B",
+      duration: "3:20",
+      image:
+        "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=400",
+    },
+    {
+      id: 2,
+      title: "No Scrubs",
+      artist: "TLC",
+      plays: "1.2B",
+      duration: "3:34",
+      image:
+        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=400",
+    },
+    {
+      id: 3,
+      title: "We Belong Together",
+      artist: "Mariah Carey",
+      plays: "1.5B",
+      duration: "3:22",
+      image:
+        "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=400",
+    },
+    {
+      id: 4,
+      title: "Adorn",
+      artist: "Miguel",
+      plays: "900M",
+      duration: "3:13",
+      image:
+        "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=400",
+    },
+    {
+      id: 5,
+      title: "Best Part",
+      artist: "Daniel Caesar ft. H.E.R.",
+      plays: "1.8B",
+      duration: "3:29",
+      image:
+        "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?q=80&w=400",
+    },
+  ],
+
+  topArtists: [
+    {
+      id: "the-weeknd",
+      name: "The Weeknd",
+      followers: "110M",
+      image:
+        "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=400",
+    },
+    {
+      id: "sza",
+      name: "SZA",
+      followers: "45M",
+      image:
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400",
+    },
+    {
+      id: "frank-ocean",
+      name: "Frank Ocean",
+      followers: "30M",
+      image:
+        "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=400",
+    },
+  ],
+
+  relatedGenres: [
+    {
+      name: "Neo Soul",
+      color: "bg-purple-600",
+      image:
+        "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=400",
+    },
+    {
+      name: "Soul",
+      color: "bg-orange-600",
+      image:
+        "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=400",
+    },
+    {
+      name: "Contemporary R&B",
+      color: "bg-gray-800",
+      image:
+        "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=400",
+    },
+    {
+      name: "Quiet Storm",
+      color: "bg-blue-600",
+      image:
+        "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=400",
+    },
+  ],
+},
+country: {
+  name: "Country",
+  description:
+    "Story-driven music rooted in folk traditions, featuring acoustic instruments, heartfelt lyrics, and themes of love, life, and rural culture.",
+
+  color: "bg-yellow-700",
+  gradient: "from-yellow-700/20 to-amber-600/20",
+
+  image:
+    "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600",
+  coverImage:
+    "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1600",
+
+  stats: {
+    followers: "140M",
+    songs: "1.8M+",
+    artists: "250K+",
+  },
+
+  featuredPlaylists: [
+    {
+      id: 1,
+      title: "Country Essentials",
+      curator: "Spotify",
+      songs: 120,
+      image:
+        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=400",
+    },
+    {
+      id: 2,
+      title: "Hot Country",
+      curator: "Charts",
+      songs: 100,
+      image:
+        "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=400",
+    },
+    {
+      id: 3,
+      title: "Acoustic Country",
+      curator: "Acoustic",
+      songs: 80,
+      image:
+        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=400",
+    },
+    {
+      id: 4,
+      title: "Country Roads",
+      curator: "Travel",
+      songs: 90,
+      image:
+        "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=400",
+    },
+  ],
+
+  topSongs: [
+    {
+      id: 1,
+      title: "Take Me Home, Country Roads",
+      artist: "John Denver",
+      plays: "1.6B",
+      duration: "3:10",
+      image:
+        "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=400",
+    },
+    {
+      id: 2,
+      title: "Jolene",
+      artist: "Dolly Parton",
+      plays: "1.2B",
+      duration: "2:43",
+      image:
+        "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=400",
+    },
+    {
+      id: 3,
+      title: "Tennessee Whiskey",
+      artist: "Chris Stapleton",
+      plays: "1.8B",
+      duration: "4:54",
+      image:
+        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=400",
+    },
+    {
+      id: 4,
+      title: "The Gambler",
+      artist: "Kenny Rogers",
+      plays: "900M",
+      duration: "3:30",
+      image:
+        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=400",
+    },
+    {
+      id: 5,
+      title: "Before He Cheats",
+      artist: "Carrie Underwood",
+      plays: "1.1B",
+      duration: "3:19",
+      image:
+        "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=400",
+    },
+  ],
+
+  topArtists: [
+    {
+      id: "taylor-swift",
+      name: "Taylor Swift",
+      followers: "120M",
+      image:
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400",
+    },
+    {
+      id: "luke-combs",
+      name: "Luke Combs",
+      followers: "25M",
+      image:
+        "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=400",
+    },
+    {
+      id: "chris-stapleton",
+      name: "Chris Stapleton",
+      followers: "20M",
+      image:
+        "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=400",
+    },
+  ],
+
+  relatedGenres: [
+    {
+      name: "Honky Tonk",
+      color: "bg-amber-700",
+      image:
+        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=400",
+    },
+    {
+      name: "Bluegrass",
+      color: "bg-green-700",
+      image:
+        "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=400",
+    },
+    {
+      name: "Country Rock",
+      color: "bg-orange-700",
+      image:
+        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=400",
+    },
+    {
+      name: "Country Pop",
+      color: "bg-pink-600",
+      image:
+        "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=400",
+    },
+  ],
+},
+blues: {
+  name: "Blues",
+  description:
+    "Soulful and expressive music rooted in African American traditions, known for its emotional depth, simple chord progressions, and themes of struggle, love, and resilience.",
+
+  color: "bg-blue-800",
+  gradient: "from-blue-800/20 to-indigo-600/20",
+
+  image:
+    "https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=1600",
+  coverImage:
+    "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=1600",
+
+  stats: {
+    followers: "70M",
+    songs: "1.2M+",
+    artists: "150K+",
+  },
+
+  featuredPlaylists: [
+    {
+      id: 1,
+      title: "Blues Essentials",
+      curator: "Spotify",
+      songs: 100,
+      image:
+        "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=400",
+    },
+    {
+      id: 2,
+      title: "Delta Blues",
+      curator: "Roots",
+      songs: 80,
+      image:
+        "https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=400",
+    },
+    {
+      id: 3,
+      title: "Electric Blues",
+      curator: "Guitar",
+      songs: 90,
+      image:
+        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=400",
+    },
+    {
+      id: 4,
+      title: "Late Night Blues",
+      curator: "Mood",
+      songs: 70,
+      image:
+        "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=400",
+    },
+  ],
+
+  topSongs: [
+    {
+      id: 1,
+      title: "The Thrill Is Gone",
+      artist: "B.B. King",
+      plays: "600M",
+      duration: "5:24",
+      image:
+        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=400",
+    },
+    {
+      id: 2,
+      title: "Cross Road Blues",
+      artist: "Robert Johnson",
+      plays: "450M",
+      duration: "2:39",
+      image:
+        "https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=400",
+    },
+    {
+      id: 3,
+      title: "Hoochie Coochie Man",
+      artist: "Muddy Waters",
+      plays: "500M",
+      duration: "2:50",
+      image:
+        "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=400",
+    },
+    {
+      id: 4,
+      title: "Boom Boom",
+      artist: "John Lee Hooker",
+      plays: "480M",
+      duration: "2:30",
+      image:
+        "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=400",
+    },
+    {
+      id: 5,
+      title: "Pride and Joy",
+      artist: "Stevie Ray Vaughan",
+      plays: "550M",
+      duration: "3:39",
+      image:
+        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=400",
+    },
+  ],
+
+  topArtists: [
+    {
+      id: "bb-king",
+      name: "B.B. King",
+      followers: "8M",
+      image:
+        "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=400",
+    },
+    {
+      id: "muddy-waters",
+      name: "Muddy Waters",
+      followers: "6M",
+      image:
+        "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=400",
+    },
+    {
+      id: "eric-clapton",
+      name: "Eric Clapton",
+      followers: "12M",
+      image:
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400",
+    },
+  ],
+
+  relatedGenres: [
+    {
+      name: "Delta Blues",
+      color: "bg-indigo-700",
+      image:
+        "https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=400",
+    },
+    {
+      name: "Chicago Blues",
+      color: "bg-blue-700",
+      image:
+        "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=400",
+    },
+    {
+      name: "Soul",
+      color: "bg-orange-600",
+      image:
+        "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=400",
+    },
+    {
+      name: "Rock",
+      color: "bg-red-600",
+      image:
+        "https://images.unsplash.com/photo-1507878866276-a947ef722fee?q=80&w=400",
+    },
+  ],
+},
+reggae: {
+  name: "Reggae",
+  description:
+    "Laid-back music originating from Jamaica, characterized by offbeat rhythms, deep basslines, and themes of peace, love, and social consciousness.",
+
+  color: "bg-green-600",
+  gradient: "from-green-600/20 to-yellow-500/20",
+
+  image:
+    "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1600",
+  coverImage:
+    "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1600",
+
+  stats: {
+    followers: "110M",
+    songs: "900K+",
+    artists: "120K+",
+  },
+
+  featuredPlaylists: [
+    {
+      id: 1,
+      title: "Reggae Classics",
+      curator: "Spotify",
+      songs: 100,
+      image:
+        "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=400",
+    },
+    {
+      id: 2,
+      title: "Island Vibes",
+      curator: "Chill",
+      songs: 80,
+      image:
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=400",
+    },
+    {
+      id: 3,
+      title: "Roots Reggae",
+      curator: "Roots",
+      songs: 90,
+      image:
+        "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=400",
+    },
+    {
+      id: 4,
+      title: "Modern Reggae",
+      curator: "Fresh",
+      songs: 70,
+      image:
+        "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?q=80&w=400",
+    },
+  ],
+
+  topSongs: [
+    {
+      id: 1,
+      title: "No Woman, No Cry",
+      artist: "Bob Marley & The Wailers",
+      plays: "1.5B",
+      duration: "4:05",
+      image:
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=400",
+    },
+    {
+      id: 2,
+      title: "Three Little Birds",
+      artist: "Bob Marley & The Wailers",
+      plays: "1.8B",
+      duration: "3:00",
+      image:
+        "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=400",
+    },
+    {
+      id: 3,
+      title: "Red Red Wine",
+      artist: "UB40",
+      plays: "1.2B",
+      duration: "3:01",
+      image:
+        "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=400",
+    },
+    {
+      id: 4,
+      title: "Bad Boys",
+      artist: "Inner Circle",
+      plays: "900M",
+      duration: "3:50",
+      image:
+        "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?q=80&w=400",
+    },
+    {
+      id: 5,
+      title: "Is This Love",
+      artist: "Bob Marley & The Wailers",
+      plays: "1.6B",
+      duration: "3:52",
+      image:
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=400",
+    },
+  ],
+
+  topArtists: [
+    {
+      id: "bob-marley",
+      name: "Bob Marley",
+      followers: "40M",
+      image:
+        "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=400",
+    },
+    {
+      id: "peter-tosh",
+      name: "Peter Tosh",
+      followers: "10M",
+      image:
+        "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=400",
+    },
+    {
+      id: "sean-paul",
+      name: "Sean Paul",
+      followers: "25M",
+      image:
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400",
+    },
+  ],
+
+  relatedGenres: [
+    {
+      name: "Dancehall",
+      color: "bg-yellow-600",
+      image:
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=400",
+    },
+    {
+      name: "Ska",
+      color: "bg-green-700",
+      image:
+        "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=400",
+    },
+    {
+      name: "Dub",
+      color: "bg-indigo-700",
+      image:
+        "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=400",
+    },
+    {
+      name: "Roots Reggae",
+      color: "bg-red-600",
+      image:
+        "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?q=80&w=400",
+    },
+  ],
+},
+dangdut: {
+  name: "Dangdut",
+  description:
+    "Popular Indonesian music genre blending Malay, Indian, and Arabic influences, known for its rhythmic beats, catchy melodies, and danceable grooves.",
+
+  color: "bg-orange-600",
+  gradient: "from-orange-600/20 to-yellow-500/20",
+
+  image:
+    "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1600",
+  coverImage:
+    "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=1600",
+
+  stats: {
+    followers: "160M",
+    songs: "1.5M+",
+    artists: "200K+",
+  },
+
+  featuredPlaylists: [
+    {
+      id: 1,
+      title: "Dangdut Hits",
+      curator: "Musicon",
+      songs: 120,
+      image:
+        "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=400",
+    },
+    {
+      id: 2,
+      title: "Dangdut Koplo",
+      curator: "Party",
+      songs: 100,
+      image:
+        "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=400",
+    },
+    {
+      id: 3,
+      title: "Dangdut Lawas",
+      curator: "Classic",
+      songs: 80,
+      image:
+        "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?q=80&w=400",
+    },
+    {
+      id: 4,
+      title: "Dangdut Remix",
+      curator: "Dance",
+      songs: 90,
+      image:
+        "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=400",
+    },
+  ],
+
+  topSongs: [
+    {
+      id: 1,
+      title: "Lagi Syantik",
+      artist: "Siti Badriah",
+      plays: "900M",
+      duration: "3:30",
+      image:
+        "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=400",
+    },
+    {
+      id: 2,
+      title: "Sayang",
+      artist: "Via Vallen",
+      plays: "1.2B",
+      duration: "4:00",
+      image:
+        "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=400",
+    },
+    {
+      id: 3,
+      title: "Cidro",
+      artist: "Didi Kempot",
+      plays: "800M",
+      duration: "5:20",
+      image:
+        "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?q=80&w=400",
+    },
+    {
+      id: 4,
+      title: "Oplosan",
+      artist: "Wiwik Sagita",
+      plays: "700M",
+      duration: "4:10",
+      image:
+        "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=400",
+    },
+    {
+      id: 5,
+      title: "Pamer Bojo",
+      artist: "Didi Kempot",
+      plays: "950M",
+      duration: "4:30",
+      image:
+        "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=400",
+    },
+  ],
+
+  topArtists: [
+    {
+      id: "rhoma-irama",
+      name: "Rhoma Irama",
+      followers: "20M",
+      image:
+        "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=400",
+    },
+    {
+      id: "via-vallen",
+      name: "Via Vallen",
+      followers: "15M",
+      image:
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400",
+    },
+    {
+      id: "didi-kempot",
+      name: "Didi Kempot",
+      followers: "18M",
+      image:
+        "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=400",
+    },
+  ],
+
+  relatedGenres: [
+    {
+      name: "Dangdut Koplo",
+      color: "bg-yellow-600",
+      image:
+        "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=400",
+    },
+    {
+      name: "Remix",
+      color: "bg-green-600",
+      image:
+        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=400",
+    },
+    {
+      name: "Pop",
+      color: "bg-blue-600",
+      image:
+        "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?q=80&w=400",
+    },
+    {
+      name: "Campursari",
+      color: "bg-pink-600",
+      image:
+        "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=400",
+    },
+  ],
+}
 };
 
-const genreName = route.params.name || "rock";
+const genreName = (route.params.name || "rock")
+  .toLowerCase()
+  .trim()
+  .replace(/\s+/g, "-");
+console.log("PARAM:", route.params.name);
 const genre = genres[genreName] || genres.rock;
 </script>
 
