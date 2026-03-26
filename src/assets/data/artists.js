@@ -1,0 +1,93 @@
+export const artists = [
+  // METAL
+  {
+    id: 1,
+    name: "Metallica",
+    image:
+      "https://i.pinimg.com/736x/61/45/34/61453419e45be0347680501d626bfb60.jpg",
+    genreIds: [1],
+  },
+  {
+    id: 2,
+    name: "Slipknot",
+    image:
+      "https://i.pinimg.com/736x/e9/ee/65/e9ee65c9a4cf041f09e0232035b30e92.jpg",
+    genreIds: [1],
+  },
+  {
+    id: 3,
+    name: "Avenged Sevenfold",
+    image:
+      "https://i.pinimg.com/1200x/83/db/c6/83dbc69e2b655085855eca6007ddeed1.jpg",
+    genreIds: [1],
+  },
+
+  // PUNK ROCK
+  {
+    id: 4,
+    name: "Green Day",
+    image:
+      "https://i.pinimg.com/736x/f1/91/cc/f191cc63d0b09cb2c9a0bbbfcb5d0c71.jpg",
+    genreIds: [2],
+  },
+  {
+    id: 5,
+    name: "Blink-182",
+    image:
+      "https://i.pinimg.com/736x/63/f4/5c/63f45c338bb4f5c9b78fddfcb3cb1d2d.jpg",
+    genreIds: [2],
+  },
+  {
+    id: 6,
+    name: "The Offspring",
+    image:
+      "https://i.pinimg.com/736x/38/36/7c/38367c6f63d5a8e2b4e9e1e8152ef749.jpg",
+    genreIds: [2],
+  },
+
+  // HARD ROCK
+  {
+    id: 7,
+    name: "Guns N' Roses",
+    image:
+      "https://i.pinimg.com/736x/6e/7e/3d/6e7e3d0bbd8fda7c3c8cbcb44d9f9f94.jpg",
+    genreIds: [3],
+  },
+  {
+    id: 8,
+    name: "AC/DC",
+    image:
+      "https://i.pinimg.com/736x/0d/75/60/0d7560b8e4a4bb6c59cbe07d8c7d90d2.jpg",
+    genreIds: [3],
+  },
+  {
+    id: 9,
+    name: "Led Zeppelin",
+    image:
+      "https://i.pinimg.com/736x/6b/5b/8f/6b5b8f3c1f4a92f2a8b2a6fcd2b4e3df.jpg",
+    genreIds: [3],
+  },
+
+  // ALTERNATIVE ROCK
+  {
+    id: 10,
+    name: "Radiohead",
+    image:
+      "https://i.pinimg.com/736x/3c/17/6f/3c176f4b16d90c0d3c93926ab9dd98ec.jpg",
+    genreIds: [4],
+  },
+  {
+    id: 11,
+    name: "Arctic Monkeys",
+    image:
+      "https://i.pinimg.com/736x/68/9d/3e/689d3e28c71f8faef5b45b6b6d57d94f.jpg",
+    genreIds: [4],
+  },
+  {
+    id: 12,
+    name: "The Strokes",
+    image:
+      "https://i.pinimg.com/736x/58/5f/32/585f324be2c43df07cbb5f2cbff45c19.jpg",
+    genreIds: [4],
+  },
+];

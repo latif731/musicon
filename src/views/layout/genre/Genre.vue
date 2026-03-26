@@ -1915,7 +1915,7 @@ dangdut: {
         "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?q=80&w=400",
     },
     {
-      name: "Campursari",
+      name: "Dangdut Jawa",
       color: "bg-pink-600",
       image:
         "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=400",
