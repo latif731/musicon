@@ -10,6 +10,7 @@ export const songs = [
     genreId: 1,
     duration: "5:31",
     cover: albums[0].cover,
+    img:""
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ export const songs = [
     genreId: 1,
     duration: "4:12",
     cover: albums[1].cover,
+    img:""
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const songs = [
     genreId: 1,
     duration: "5:05",
     cover: albums[2].cover,
+    img:""
   },
 
   // PUNK
@@ -39,6 +42,7 @@ export const songs = [
     genreId: 2,
     duration: "2:54",
     cover: albums[3].cover,
+    img:""
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ export const songs = [
     genreId: 2,
     duration: "2:48",
     cover: albums[4].cover,
+    img:""
   },
   {
     id: 6,
@@ -57,6 +62,7 @@ export const songs = [
     genreId: 2,
     duration: "4:17",
     cover: albums[5].cover,
+    img:""
   },
 
   // HARD ROCK
@@ -68,6 +74,7 @@ export const songs = [
     genreId: 3,
     duration: "5:56",
     cover: albums[6].cover,
+    img:""
   },
   {
     id: 8,
@@ -77,6 +84,7 @@ export const songs = [
     genreId: 3,
     duration: "4:15",
     cover: albums[7].cover,
+    img:""
   },
   {
     id: 9,
@@ -86,6 +94,7 @@ export const songs = [
     genreId: 3,
     duration: "8:02",
     cover: albums[8].cover,
+    img:""
   },
 
   // ALT ROCK
@@ -97,6 +106,7 @@ export const songs = [
     genreId: 4,
     duration: "3:58",
     cover: albums[9].cover,
+    img:""
   },
   {
     id: 11,
@@ -106,6 +116,7 @@ export const songs = [
     genreId: 4,
     duration: "4:32",
     cover: albums[10].cover,
+    img:""
   },
   {
     id: 12,
@@ -115,5 +126,6 @@ export const songs = [
     genreId: 4,
     duration: "3:13",
     cover: albums[11].cover,
+    img:""
   },
 ];

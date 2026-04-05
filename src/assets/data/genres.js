@@ -7,9 +7,9 @@ export const genres = [
   },
   {
     id: 2,
-    name: "punk-rock",
+    name: "punk rock",
     displayName: "Punk Rock",
-    banner: "https://i.pinimg.com/736x/63/6c/43/636c43d6e6e0dba3c9bbefc82b1f3453.jpg",
+    banner: "https://i.pinimg.com/1200x/36/72/09/367209037bb8dee4b1e9f6af83017594.jpg",
   },
   {
     id: 3,

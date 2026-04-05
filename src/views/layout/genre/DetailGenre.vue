@@ -9,6 +9,7 @@ console.log("import genres", genres)
 ========================= */
 const route = useRoute();
 const genreName = route.params.name?.toLowerCase();
+console.log("genreName",genreName)
 
 /* =========================
    MOCK DATA (sementara)

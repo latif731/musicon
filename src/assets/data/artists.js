@@ -27,21 +27,21 @@ export const artists = [
     id: 4,
     name: "Green Day",
     image:
-      "https://i.pinimg.com/736x/f1/91/cc/f191cc63d0b09cb2c9a0bbbfcb5d0c71.jpg",
+      "https://i.pinimg.com/736x/14/0e/1d/140e1df3f3f4f897757a1f437a734e6c.jpg",
     genreIds: [2],
   },
   {
     id: 5,
     name: "Blink-182",
     image:
-      "https://i.pinimg.com/736x/63/f4/5c/63f45c338bb4f5c9b78fddfcb3cb1d2d.jpg",
+      "https://i.pinimg.com/736x/43/5b/9a/435b9a5e64cc916f0ff5a0e6bdf39d47.jpg",
     genreIds: [2],
   },
   {
     id: 6,
     name: "The Offspring",
     image:
-      "https://i.pinimg.com/736x/38/36/7c/38367c6f63d5a8e2b4e9e1e8152ef749.jpg",
+      "https://i.pinimg.com/736x/8b/92/7b/8b927b0999180b58720a6088b2631898.jpg",
     genreIds: [2],
   },
 
