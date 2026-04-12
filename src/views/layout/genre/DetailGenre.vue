@@ -228,7 +228,7 @@ const relatedGenres = computed(() =>
             class="flex justify-between items-center p-3 bg-neutral-800 rounded hover:bg-neutral-700 cursor-pointer"
           >
             <div class="flex gap-5 items-center">
-              <img :src="song.cover" alt="" class="w-[50px]">
+              <img :src="song.image" alt="" class="w-[50px]">
               <span>{{ song.title }}</span>
             </div>
             <span class="text-gray-400 text-sm">{{ song.duration }}</span>

@@ -13,7 +13,7 @@ export const genres = [
   },
   {
     id: 3,
-    name: "hard-rock",
+    name: "hard rock",
     displayName: "Hard Rock",
     banner: "https://i.pinimg.com/736x/52/91/89/529189b6dfd4e88e4eacfe7e2c64f4b4.jpg",
   },

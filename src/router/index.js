@@ -15,6 +15,8 @@ import Allgenre from "@/views/layout/All/Allgenre.vue";
 import Search from "@/views/layout/Search.vue";
 import Genre from "@/views/layout/genre/Genre.vue";
 import DetailGenre from "@/views/layout/genre/DetailGenre.vue";
+import DetailAlbum from "../views/layout/album/DetailAlbum.vue";
+import DetailArtis from "@/views/layout/artis/DetailArtis.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -99,6 +101,17 @@ const router = createRouter({
       path: "/detailgenre/:name",
       name: "detailgenre",
       component: DetailGenre,
+    },
+    {
+      path: "/detailalbum",
+      name: "detailalbum",
+      component: DetailAlbum,
+    },
+    {
+      path: "/artist/:id",
+      name: "DetailArtist",
+      component: DetailArtis,
+      props:true
     },
   ],
 });
