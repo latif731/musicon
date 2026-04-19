@@ -1,9 +1,10 @@
 <script setup>
 import Layout from "@/components/Layout.vue";
-import { useRoute } from "vue-router";
+import { useRoute, RouterLink } from "vue-router";
 import { computed } from "vue";
 import { genres, artists, albums, songs } from "@/assets/data";
 console.log("import genres", genres)
+console.log("artist", artists?.id)
 /* =========================
    ROUTE
 ========================= */
@@ -207,6 +208,9 @@ const relatedGenres = computed(() =>
             :key="artist.id"
             class="text-center"
           >
+          <RouterLink 
+          :to="`/artist/${artist.slug}`"
+          >
             <div class="w-32 h-32 bg-gray-700 rounded-full mb-2">
               <img
                 :src="artist?.image"
@@ -214,6 +218,8 @@ const relatedGenres = computed(() =>
               />
             </div>
             <p>{{ artist.name }}</p>
+            <!-- <p>{{ artist.id }}</p> -->
+          </RouterLink>
           </div>
         </div>
 

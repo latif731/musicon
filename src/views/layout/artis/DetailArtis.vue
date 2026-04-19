@@ -5,11 +5,18 @@ import Layout from "@/components/Layout.vue";
 import { artists, albums, songs } from "@/assets/data";
 
 const route = useRoute();
-const artistId = Number(route.params.id);
+const slug = route.params.slug
+console.log("slug", slug)
+// const artistId = (artists.id);
+// console.log("artistId",artistId)
 
-const artist = computed(() => artists.find(a => a.id === artistId));
-const artistAlbums = computed(() => albums.filter(a => a.artistId === artistId));
-const artistSongs = computed(() => songs.filter(s => s.artistId === artistId));
+
+const artist = computed(() => artists.find(a => a.slug === slug));
+console.log("artists", artists)
+const artistAlbums = computed(() => albums.filter(a => a.artistId === artist.value?.id));
+console.log("artistAlbums", artistAlbums)
+const artistSongs = computed(() => songs.filter(s => s.artistId === artist.value?.id));
+console.log("artistSongs", artistSongs)
 </script>
 
 <template>

@@ -108,7 +108,7 @@ const router = createRouter({
       component: DetailAlbum,
     },
     {
-      path: "/artist/:id",
+      path: "/artist/:slug",
       name: "DetailArtist",
       component: DetailArtis,
       props:true

@@ -27,7 +27,7 @@ export const songs = [
     id: 3,
     title: "Duality",
     artistId: 2,
-    albumId: 2,
+    albumId: 2, 
     duration: "4:12",
     genreId: 1,
     image:"https://i.pinimg.com/736x/eb/4d/10/eb4d104eaa60bb512c2764854a6218c3.jpg",
