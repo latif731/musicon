@@ -16,9 +16,14 @@ import platlist1 from "@/assets/playlist1.png";
 import platlist2 from "@/assets/playlist2.png";
 import platlist3 from "@/assets/playlist3.png";
 import platlist4 from "@/assets/playlist4.png";
-import { albums,artists,songs } from "@/assets/data";
 import { useRoute } from "vue-router";
 import { computed } from "vue";
+import { artists,albums,songs } from "@/assets/data";
+
+const route = useRoute();
+const slug = route.params.slug
+console.log("slug", slug)
+
 </script>
 
 <template>

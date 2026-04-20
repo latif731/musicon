@@ -103,7 +103,7 @@ const router = createRouter({
       component: DetailGenre,
     },
     {
-      path: "/detailalbum",
+      path: "/album/:artistSlug/:albumSlug",
       name: "detailalbum",
       component: DetailAlbum,
     },

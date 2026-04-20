@@ -5,6 +5,7 @@ export const albums = [
   {
     id: 1,
     title: "Black Album",
+    slug: "black-album",
     artistId: 1,
     genreId: 1,
     releaseYear: 1991,
@@ -16,6 +17,7 @@ export const albums = [
   {
     id: 2,
     title: "Iowa",
+    slug: "iowa",
     artistId: 2,
     genreId: 1,
     releaseYear: 2001,
@@ -27,6 +29,7 @@ export const albums = [
   {
     id: 3,
     title: "Hail to the King",
+    slug: "hail-to-the-king",
     artistId: 3,
     genreId: 1,
     releaseYear: 2013,
@@ -42,6 +45,7 @@ export const albums = [
   {
     id: 4,
     title: "American Idiot",
+    slug: "american-idiot",
     artistId: 4,
     genreId: 2,
     releaseYear: 2004,
@@ -53,6 +57,7 @@ export const albums = [
   {
     id: 5,
     title: "Enema of the State",
+    slug: "enema-of-the-state",
     artistId: 5,
     genreId: 2,
     releaseYear: 1999,
@@ -64,6 +69,7 @@ export const albums = [
   {
     id: 6,
     title: "Smash",
+    slug: "smash",
     artistId: 6,
     genreId: 2,
     releaseYear: 1994,
@@ -79,6 +85,7 @@ export const albums = [
   {
     id: 7,
     title: "Appetite for Destruction",
+    slug: "appetite-for-destruction",
     artistId: 7,
     genreId: 3,
     releaseYear: 1987,
@@ -90,6 +97,7 @@ export const albums = [
   {
     id: 8,
     title: "Back in Black",
+    slug: "back-in-black",
     artistId: 8,
     genreId: 3,
     releaseYear: 1980,
@@ -101,6 +109,7 @@ export const albums = [
   {
     id: 9,
     title: "Led Zeppelin IV",
+    slug: "led-zeppelin-iv",
     artistId: 9,
     genreId: 3,
     releaseYear: 1971,
@@ -116,6 +125,7 @@ export const albums = [
   {
     id: 10,
     title: "OK Computer",
+    slug: "ok-computer",
     artistId: 10,
     genreId: 4,
     releaseYear: 1997,
@@ -127,6 +137,7 @@ export const albums = [
   {
     id: 11,
     title: "AM",
+    slug: "am",
     artistId: 11,
     genreId: 4,
     releaseYear: 2013,
@@ -138,6 +149,7 @@ export const albums = [
   {
     id: 12,
     title: "Is This It",
+    slug: "is-this-it",
     artistId: 12,
     genreId: 4,
     releaseYear: 2001,

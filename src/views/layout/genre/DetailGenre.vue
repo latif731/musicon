@@ -3,14 +3,14 @@ import Layout from "@/components/Layout.vue";
 import { useRoute, RouterLink } from "vue-router";
 import { computed } from "vue";
 import { genres, artists, albums, songs } from "@/assets/data";
-console.log("import genres", genres)
-console.log("artist", artists?.id)
+console.log("import genres", genres);
+console.log("artist", artists?.id);
 /* =========================
    ROUTE
 ========================= */
 const route = useRoute();
 const genreName = route.params.name?.toLowerCase();
-console.log("genreName",genreName)
+console.log("genreName", genreName);
 
 /* =========================
    MOCK DATA (sementara)
@@ -146,6 +146,17 @@ console.log("genreName",genreName)
 /* =========================
    FILTER DATA
 ========================= */
+const getArtistById = (id) => {
+  return artists.find(a => a.id === id)
+}
+console.log("getArtistById", getArtistById)
+const genreAlbumsWithArtist = computed(() => genreAlbums.value.map(album => {
+  const artist = artists.find(a => a.id === album.artistId);
+  return {
+    ...album,
+    artistSlug: artist.slug
+  }
+}))
 const currentGenre = computed(() =>
   genres.find((g) => g.name.toLowerCase() === genreName),
 );
@@ -159,12 +170,11 @@ console.log("genreArtists", genreArtists.value);
 const genreSongs = computed(() =>
   songs.filter((s) => s.genreId === currentGenre.value?.id),
 );
-console.log("genreSongs", genreSongs.value)
+console.log("genreSongs", genreSongs.value);
 const genreAlbums = computed(() =>
-albums.filter((a) => a.genreId === currentGenre.value?.id),
+  albums.filter((a) => a.genreId === currentGenre.value?.id),
 );
-console.log("genreAlbums", genreAlbums.value)
-
+console.log("genreAlbums", genreAlbums.value);
 
 const relatedGenres = computed(() =>
   genres.filter((g) => g.name.toLowerCase() !== genreName),
@@ -208,18 +218,16 @@ const relatedGenres = computed(() =>
             :key="artist.id"
             class="text-center"
           >
-          <RouterLink 
-          :to="`/artist/${artist.slug}`"
-          >
-            <div class="w-32 h-32 bg-gray-700 rounded-full mb-2">
-              <img
-                :src="artist?.image"
-                class="w-32 h-32 object-cover rounded-full mb-2"
-              />
-            </div>
-            <p>{{ artist.name }}</p>
-            <!-- <p>{{ artist.id }}</p> -->
-          </RouterLink>
+            <RouterLink :to="`/artist/${artist.slug}`">
+              <div class="w-32 h-32 bg-gray-700 rounded-full mb-2">
+                <img
+                  :src="artist?.image"
+                  class="w-32 h-32 object-cover rounded-full mb-2"
+                />
+              </div>
+              <p>{{ artist.name }}</p>
+              <!-- <p>{{ artist.id }}</p> -->
+            </RouterLink>
           </div>
         </div>
 
@@ -234,7 +242,7 @@ const relatedGenres = computed(() =>
             class="flex justify-between items-center p-3 bg-neutral-800 rounded hover:bg-neutral-700 cursor-pointer"
           >
             <div class="flex gap-5 items-center">
-              <img :src="song.image" alt="" class="w-[50px]">
+              <img :src="song.image" alt="" class="w-[50px]" />
               <span>{{ song.title }}</span>
             </div>
             <span class="text-gray-400 text-sm">{{ song.duration }}</span>
@@ -251,10 +259,24 @@ const relatedGenres = computed(() =>
             :key="album.id"
             class="bg-neutral-900 p-4 rounded w-40"
           >
-            <div class="h-24 bg-gray-700 rounded mb-2">
-              <img :src="album.cover" alt=""  class="w-full h-full object-cover">
-            </div>
-            <p class="text-sm">{{ album.title }}</p>
+            <RouterLink
+              :to="{
+                name: 'detailalbum',
+                params: {
+                  artistSlug: getArtistById(album.artistId)?.slug,
+                  albumSlug: album.slug,
+                },
+              }"
+            >
+              <div class="h-24 bg-gray-700 rounded mb-2">
+                <img
+                  :src="album.cover"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <p class="text-sm">{{ album.title }}</p>
+            </RouterLink>
           </div>
         </div>
 
