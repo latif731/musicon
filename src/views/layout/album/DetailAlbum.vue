@@ -21,43 +21,45 @@ import { computed } from "vue";
 import { artists,albums,songs } from "@/assets/data";
 
 const route = useRoute();
-const slug = route.params.slug
-console.log("slug", slug)
+const artistSlug = route.params.artistSlug
+console.log("artistSlug",artistSlug)
+const albumSug = route.params.albumSlug
+console.log("albumSug",albumSug)
+
+const artist = computed(() =>
+  artists.find(a => a.slug === route.params.artistSlug)
+);
+
+const album = computed(() =>
+  albums.find(a => a.slug === route.params.albumSlug)
+);
+
+const albumSongs = computed(() =>
+  songs.filter(s => s.albumId === album.value?.id)
+);  
+
+const isValid = computed(() => {
+  return album.value?.artistId === artist.value?.id;
+});
+
+
+console.log("artist:", artist.value);
+console.log("album:", album.value);
+console.log("albumSongs", albumSongs)
 
 </script>
 
 <template>
   <Layout>
-    <!-- <div v-if="false"> -->
-      <!-- <div -->
-        <!-- class="text-white fixed flex justify-center items-center top-0 left-0 bg-logreg w-x h-y z-50 overflow-auto" -->
-      <!-- > -->
-        <!-- LOGIN PAGE -->
-        <!-- <Accordion /> -->
-        <!-- REGISTER PAGE -->
-      <!-- </div> -->
-    <!-- </div> -->
     <div class="flex flex-col">
       <h1 class="font-kontol font-700 text-[32px] text-white">
         <!-- Playlist / Anime Collection -->
-         Hail To The King
+         {{album.title}}
       </h1>
       <div class="flex gap-10 items-center mt-10">
         <div
           class="w-[125px] h-[125px] bg-[#1F1D2B] rounded-[8px] flex flex-wrap gap-1"
         >
-          <!-- <div class="w-[60px]"> -->
-            <!-- <img :src="platlist1" alt="" /> -->
-          <!-- </div> -->
-          <!-- <div class="w-[60px]"> -->
-            <!-- <img :src="platlist2" alt="" /> -->
-          <!-- </div> -->
-          <!-- <div class="w-[60px]"> -->
-            <!-- <img :src="platlist3" alt="" /> -->
-          <!-- </div> -->
-          <!-- <div class="w-[60px]"> -->
-            <!-- <img :src="platlist4" alt="" /> -->
-          <!-- </div> -->
            <img src="https://i.pinimg.com/1200x/e3/08/bd/e308bd9e51213466036abb3da96ab553.jpg" alt="">
         </div>
         <div class="w-[595px]">
@@ -178,85 +180,6 @@ console.log("slug", slug)
           </div>
         </div>
       </div>
-      <!-- <div class="flex justify-end" v-if="true">
-        <button class="p-2 bg-[#FFFFFF] rounded-lg w-[190px]">+ Add Song</button>
-      </div> -->
-      <!-- <div class="flex justify-end" v-if="false">
-        <button class="p-2 bg-[#FFFFFF] rounded-lg w-[190px]">Close</button>
-      </div> -->
-      <!-- <div class="bg-[#1F1D2B] pb-5 pl-2 pt-2 pr-2 mt-5">
-        <h2 class="text-white font-[500] text-[18px] font-kontol p-3">
-          Let’s find song for your playlist
-        </h2>
-        <div
-          class="bg-[#3C4156] h-[41px] w-[396px] relative ml-[11px] mb-3 pl-6 rounded-[4px] flex items-center gap-3 shadow-[0_5px_10px_0px_rgba(0,0,0,0.2)]"
-        >
-          <div>
-            <img :src="search" alt="" class="w-[20px] h-[20px] mt-1" />
-          </div>
-          <input
-            type="text"
-            class="w-[396px] outline-none pl-2 bg-[#3C4156] rounded-[8px] text-white"
-            placeholder="search"
-          />
-        </div>
-        <div class="flex flex-col p-6 gap-5">
-          <div class="flex justify-between">
-            <div class="flex gap-5">
-              <img :src="playlist_2" alt="" class="w-[49px] h-[50px]" />
-              <div class="flex flex-col">
-                <h3 class="text-[20px] font-kontol font-[700] text-white">
-                  Moon River
-                </h3>
-                <p class="text-[12px] font-kontol font-[700] text-[#92929D]">
-                  Jacob Collier
-                </p>
-              </div>
-            </div>
-            <button
-              class="bg-[#92929D] rounded-[20px] w-[142px] h-[43px] hover:bg-[#4399FD] transition duration-300 text-white font-kontol font-[700]"
-            >
-              Add
-            </button>
-          </div>
-          <div class="flex justify-between">
-            <div class="flex gap-5">
-              <img :src="playlist_2" alt="" class="w-[49px] h-[50px]" />
-              <div class="flex flex-col">
-                <h3 class="text-[20px] font-kontol font-[700] text-white">
-                  Moon River
-                </h3>
-                <p class="text-[12px] font-kontol font-[700] text-[#92929D]">
-                  Jacob Collier
-                </p>
-              </div>
-            </div>
-            <button
-              class="bg-[#92929D] rounded-[20px] w-[142px] h-[43px] hover:bg-[#4399FD] transition duration-300 text-white font-kontol font-[700]"
-            >
-              Add
-            </button>
-          </div>
-          <div class="flex justify-between">
-            <div class="flex gap-5">
-              <img :src="playlist_2" alt="" class="w-[49px] h-[50px]" />
-              <div class="flex flex-col">
-                <h3 class="text-[20px] font-kontol font-[700] text-white">
-                  Moon River
-                </h3>
-                <p class="text-[12px] font-kontol font-[700] text-[#92929D]">
-                  Jacob Collier
-                </p>
-              </div>
-            </div>
-            <button
-              class="bg-[#92929D] rounded-[20px] w-[142px] h-[43px] hover:bg-[#4399FD] transition duration-300 text-white font-kontol font-[700]"
-            >
-              Add
-            </button>
-          </div>
-        </div>
-      </div> -->
       <div class="flex-grow mt-10">
         <div class="relative shadow-md sm:rounded-lg mt-4">
           <div class="max-h-[500px] overflow-y-auto custom-scroll rounded-[8px]">
