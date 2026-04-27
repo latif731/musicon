@@ -18,35 +18,33 @@ import platlist3 from "@/assets/playlist3.png";
 import platlist4 from "@/assets/playlist4.png";
 import { useRoute } from "vue-router";
 import { computed } from "vue";
-import { artists,albums,songs } from "@/assets/data";
+import { artists, albums, songs } from "@/assets/data";
 
 const route = useRoute();
-const artistSlug = route.params.artistSlug
-console.log("artistSlug",artistSlug)
-const albumSug = route.params.albumSlug
-console.log("albumSug",albumSug)
+const artistSlug = route.params.artistSlug;
+console.log("artistSlug", artistSlug);
+const albumSug = route.params.albumSlug;
+console.log("albumSug", albumSug);
 
 const artist = computed(() =>
-  artists.find(a => a.slug === route.params.artistSlug)
+  artists.find((a) => a.slug === route.params.artistSlug),
 );
 
 const album = computed(() =>
-  albums.find(a => a.slug === route.params.albumSlug)
+  albums.find((a) => a.slug === route.params.albumSlug),
 );
 
 const albumSongs = computed(() =>
-  songs.filter(s => s.albumId === album.value?.id)
-);  
+  songs.filter((s) => s.albumId === album.value?.id),
+);
 
 const isValid = computed(() => {
   return album.value?.artistId === artist.value?.id;
 });
 
-
 console.log("artist:", artist.value);
 console.log("album:", album.value);
-console.log("albumSongs", albumSongs)
-
+console.log("albumSongs", albumSongs);
 </script>
 
 <template>
@@ -54,41 +52,42 @@ console.log("albumSongs", albumSongs)
     <div class="flex flex-col">
       <h1 class="font-kontol font-700 text-[32px] text-white">
         <!-- Playlist / Anime Collection -->
-         {{album.title}}
+        {{ album.title }}
       </h1>
       <div class="flex gap-10 items-center mt-10">
         <div
           class="w-[125px] h-[125px] bg-[#1F1D2B] rounded-[8px] flex flex-wrap gap-1"
         >
-           <img src="https://i.pinimg.com/1200x/e3/08/bd/e308bd9e51213466036abb3da96ab553.jpg" alt="">
+          <img :src="album?.cover" alt="" />
         </div>
         <div class="w-[595px]">
           <p class="font-kontol font-700 text-white">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-            autem eveniet optio, consectetur, est earum tempore at, sed quod
-            dolorem voluptate id obcaecati eaque perspiciatis adipisci nesciunt!
-            Sed, mollitia repellendus!
+            {{ album.description }}
           </p>
           <div class="flex mt-3 gap-5 items-center">
             <p class="text-white">
               By
-              <span class="font-kontol text-white font-[700]"
-                >Avenged Sevenfold</span
-              >
+              <span class="font-kontol text-white font-[700]">{{
+                artist.name
+              }}</span>
             </p>
             <div
               class="boder border-[#3C4156] rounded-lg w-2 h-2 bg-[#3C4156]"
             ></div>
-            <p class="text-[#92929D] font-kontol font-[400]">15 Songs</p>
+            <p class="text-[#92929D] font-kontol font-[400]">
+              {{ albumSongs.length }}
+            </p>
             <div
               class="boder border-[#3C4156] rounded-lg w-2 h-2 bg-[#3C4156]"
             ></div>
-            <p class="text-[#92929D] font-kontol font-[400]">About 2 hr 12 min</p>
+            <p class="text-[#92929D] font-kontol font-[400]">
+              About 2 hr 12 min
+            </p>
           </div>
         </div>
       </div>
       <div
-        class="border border-[#1F1D2B] bg-[#1F1D2B] rounded-[8px] w-[185px] h-[107px] absolute right-[150px] top-[180px]"
+        class="border border-[#1F1D2B] bg-[#1F1D2B] rounded-[8px] w-[185px] h-[107px] absolute right-[110px] top-[180px]"
       >
         <p
           class="font-kontol font-[700] text-[20px] border-b border-b-[#3C4156] text-white pt-4 pb-3 text-center"
@@ -182,7 +181,9 @@ console.log("albumSongs", albumSongs)
       </div>
       <div class="flex-grow mt-10">
         <div class="relative shadow-md sm:rounded-lg mt-4">
-          <div class="max-h-[500px] overflow-y-auto custom-scroll rounded-[8px]">
+          <div
+            class="max-h-[500px] overflow-y-auto custom-scroll rounded-[8px]"
+          >
             <table
               class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 overflow-y-scroll"
             >
@@ -190,13 +191,15 @@ console.log("albumSongs", albumSongs)
                 class="text-xs sticky top-0 z-10 text-gray-700 uppercase bg-[#1F1D2B] border-b border-[#3C4156]"
               >
                 <tr>
-                  <th scope="col" class="px-6 py-3 text-white normal-case">No</th>
+                  <th scope="col" class="px-6 py-3 text-white normal-case">
+                    No
+                  </th>
                   <th scope="col" class="px-6 py-3 text-white normal-case">
                     Title
                   </th>
-                  <th scope="col" class="px-6 py-3 text-white normal-case">
+                  <!-- <th scope="col" class="px-6 py-3 text-white normal-case">
                     Artist
-                  </th>
+                  </th> -->
                   <th scope="col" class="px-6 py-3 text-white normal-case">
                     Duration
                   </th>
@@ -205,28 +208,32 @@ console.log("albumSongs", albumSongs)
                   </th>
                 </tr>
               </thead>
-              <tbody v-if="true">
+              <tbody v-if="albumSongs.length">
                 <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
+                  v-for="(song, index) in albumSongs"
+                  :key="song.id"
+                  class="group bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
                 >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
-                  >
-                    <div v-if="false">1</div>
-                    <div v-if="false">
-                      <img :src="play" alt="" />
-                    </div>
-                    <div v-if="true">
-                      <img :src="stop" alt="" />
-                    </div>
+                  <th class="px-6 py-4 text-white w-[40px] relative">
+                    <!-- ANGKA -->
+                    <span class="group-hover:opacity-0 transition duration-200">
+                      {{ index + 1 }}
+                    </span>
+
+                    <!-- ICON PLAY -->
+                    <img
+                      :src="play"
+                      class="absolute top-1/2 left-[28px] -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition duration-200 w-4 h-4 cursor-pointer"
+                    />
                   </th>
                   <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Moon River
+                    <img class="w-[40px] h-[40px]" :src="song.image" alt="" />
+                    {{ song.title }}
                   </td>
-                  <td class="px-6 py-4 text-white">Jacob Collier</td>
-                  <td class="px-6 py-4 text-white">02.35</td>
+                  <!-- <td class="px-6 py-4 text-white">Jacob Collier</td> -->
+                  <td class="px-6 py-4 text-white">
+                    {{ song.duration }}
+                  </td>
                   <td class="px-6 py-4 flex items-center gap-2">
                     <a
                       href="#"
@@ -238,445 +245,16 @@ console.log("albumSongs", albumSongs)
                       class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                       ><img :src="share" alt="" class="w-6" />
                     </a>
-                    <a
+                    <!-- <a
                       href="#"
                       class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                       ><img :src="sampah" alt="" />
-                    </a>
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
-                >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-white w-[0px] whitespace-nowrap dark:text-white"
-                  >
-                    <div v-if="false">1</div>
-                    <div v-if="false">
-                      <img :src="play" alt="" />
-                    </div>
-                    <div v-if="true">
-                      <img :src="stop" alt="" />
-                    </div>
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Hollow
-                  </td>
-                  <td class="px-6 py-4 text-white">Final Fantasi</td>
-                  <td class="px-6 py-4 text-white">04.51</td>
-                  <td class="px-6 py-4 flex items-center gap-2">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="like" alt="" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="share" alt="" class="w-6" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="sampah" alt="" />
-                    </a>
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 hover:bg-[#2D304D] dark:hover:bg-gray-600"
-                >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white"
-                  >
-                    <div v-if="false">1</div>
-                    <div v-if="false">
-                      <img :src="play" alt="" />
-                    </div>
-                    <div v-if="true">
-                      <img :src="stop" alt="" />
-                    </div>
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Jazz & Chill
-                  </td>
-                  <td class="px-6 py-4 text-white">Joe Pass</td>
-                  <td class="px-6 py-4 text-white">03.59</td>
-                  <td class="px-6 py-4 flex items-center gap-2">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="like" alt="" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="share" alt="" class="w-6" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="sampah" alt="" />
-                    </a>
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
-                >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
-                  >
-                    <div v-if="false">1</div>
-                    <div v-if="false">
-                      <img :src="play" alt="" />
-                    </div>
-                    <div v-if="true">
-                      <img :src="stop" alt="" />
-                    </div>
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Moon River
-                  </td>
-                  <td class="px-6 py-4 text-white">Jacob Collier</td>
-                  <td class="px-6 py-4 text-white">02.35</td>
-                  <td class="px-6 py-4 flex items-center gap-2">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="like" alt="" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="share" alt="" class="w-6" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="sampah" alt="" />
-                    </a>
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
-                >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-white w-[0px] whitespace-nowrap dark:text-white"
-                  >
-                    <div v-if="false">1</div>
-                    <div v-if="false">
-                      <img :src="play" alt="" />
-                    </div>
-                    <div v-if="true">
-                      <img :src="stop" alt="" />
-                    </div>
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Hollow
-                  </td>
-                  <td class="px-6 py-4 text-white">Final Fantasi</td>
-                  <td class="px-6 py-4 text-white">04.51</td>
-                  <td class="px-6 py-4 flex items-center gap-2">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="like" alt="" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="share" alt="" class="w-6" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="sampah" alt="" />
-                    </a>
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 hover:bg-[#2D304D] dark:hover:bg-gray-600"
-                >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white"
-                  >
-                    <div v-if="false">1</div>
-                    <div v-if="false">
-                      <img :src="play" alt="" />
-                    </div>
-                    <div v-if="true">
-                      <img :src="stop" alt="" />
-                    </div>
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Jazz & Chill
-                  </td>
-                  <td class="px-6 py-4 text-white">Joe Pass</td>
-                  <td class="px-6 py-4 text-white">03.59</td>
-                  <td class="px-6 py-4 flex items-center gap-2">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="like" alt="" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="share" alt="" class="w-6" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="sampah" alt="" />
-                    </a>
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
-                >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
-                  >
-                    <div v-if="false">1</div>
-                    <div v-if="false">
-                      <img :src="play" alt="" />
-                    </div>
-                    <div v-if="true">
-                      <img :src="stop" alt="" />
-                    </div>
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Moon River
-                  </td>
-                  <td class="px-6 py-4 text-white">Jacob Collier</td>
-                  <td class="px-6 py-4 text-white">02.35</td>
-                  <td class="px-6 py-4 flex items-center gap-2">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="like" alt="" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="share" alt="" class="w-6" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="sampah" alt="" />
-                    </a>
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
-                >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-white w-[0px] whitespace-nowrap dark:text-white"
-                  >
-                    <div v-if="false">1</div>
-                    <div v-if="false">
-                      <img :src="play" alt="" />
-                    </div>
-                    <div v-if="true">
-                      <img :src="stop" alt="" />
-                    </div>
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Hollow
-                  </td>
-                  <td class="px-6 py-4 text-white">Final Fantasi</td>
-                  <td class="px-6 py-4 text-white">04.51</td>
-                  <td class="px-6 py-4 flex items-center gap-2">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="like" alt="" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="share" alt="" class="w-6" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="sampah" alt="" />
-                    </a>
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 hover:bg-[#2D304D] dark:hover:bg-gray-600"
-                >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white"
-                  >
-                    <div v-if="false">1</div>
-                    <div v-if="false">
-                      <img :src="play" alt="" />
-                    </div>
-                    <div v-if="true">
-                      <img :src="stop" alt="" />
-                    </div>
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Jazz & Chill
-                  </td>
-                  <td class="px-6 py-4 text-white">Joe Pass</td>
-                  <td class="px-6 py-4 text-white">03.59</td>
-                  <td class="px-6 py-4 flex items-center gap-2">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="like" alt="" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="share" alt="" class="w-6" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="sampah" alt="" />
-                    </a>
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
-                >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium w-[0px] whitespace-nowrap text-white dark:text-white"
-                  >
-                    <div v-if="false">1</div>
-                    <div v-if="false">
-                      <img :src="play" alt="" />
-                    </div>
-                    <div v-if="true">
-                      <img :src="stop" alt="" />
-                    </div>
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Moon River
-                  </td>
-                  <td class="px-6 py-4 text-white">Jacob Collier</td>
-                  <td class="px-6 py-4 text-white">02.35</td>
-                  <td class="px-6 py-4 flex items-center gap-2">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="like" alt="" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="share" alt="" class="w-6" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="sampah" alt="" />
-                    </a>
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
-                >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-white w-[0px] whitespace-nowrap dark:text-white"
-                  >
-                    <div v-if="false">1</div>
-                    <div v-if="false">
-                      <img :src="play" alt="" />
-                    </div>
-                    <div v-if="true">
-                      <img :src="stop" alt="" />
-                    </div>
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Hollow
-                  </td>
-                  <td class="px-6 py-4 text-white">Final Fantasi</td>
-                  <td class="px-6 py-4 text-white">04.51</td>
-                  <td class="px-6 py-4 flex items-center gap-2">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="like" alt="" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="share" alt="" class="w-6" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="sampah" alt="" />
-                    </a>
-                  </td>
-                </tr>
-                <tr
-                  class="bg-[#1F1D2B] dark:bg-gray-800 hover:bg-[#2D304D] dark:hover:bg-gray-600"
-                >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white"
-                  >
-                    <div v-if="false">1</div>
-                    <div v-if="false">
-                      <img :src="play" alt="" />
-                    </div>
-                    <div v-if="true">
-                      <img :src="stop" alt="" />
-                    </div>
-                  </th>
-                  <td class="px-1 py-4 flex items-center gap-4 text-white">
-                    <img class="w-[40px] h-[40px]" :src="music_1" alt="" />
-                    Jazz & Chill
-                  </td>
-                  <td class="px-6 py-4 text-white">Joe Pass</td>
-                  <td class="px-6 py-4 text-white">03.59</td>
-                  <td class="px-6 py-4 flex items-center gap-2">
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="like" alt="" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="share" alt="" class="w-6" />
-                    </a>
-                    <a
-                      href="#"
-                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      ><img :src="sampah" alt="" />
-                    </a>
+                    </a> -->
                   </td>
                 </tr>
               </tbody>
-  
-              <tbody v-if="false">
+
+              <tbody v-else>
                 <tr
                   class="bg-[#1F1D2B] dark:bg-gray-800 dark:border-gray-700 hover:bg-[#2D304D] dark:hover:bg-gray-600"
                 >
@@ -707,11 +285,11 @@ console.log("albumSongs", albumSongs)
 }
 
 .custom-scroll::-webkit-scrollbar-thumb {
-  background: #3C4156;
+  background: #3c4156;
   border-radius: 999px;
 }
 
 .custom-scroll::-webkit-scrollbar-thumb:hover {
-  background: #6B7280;
+  background: #6b7280;
 }
 </style>
